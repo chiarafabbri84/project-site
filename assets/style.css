@@ -25,6 +25,17 @@ p {
   }
 }
 
+.no-underline-link {
+  text-decoration: none;              /* rimuove la sottolineatura */
+  color: #cb38b5;                     /* rosa più scuro */
+  font-weight: bold;                  /* facoltativo */
+  transition: color 0.3s ease;
+}
+
+.no-underline-link:hover {
+  color: #b1199a;                     /* ancora più scuro al passaggio */
+}
+
 
 /* Menu principale */
 nav {
@@ -76,7 +87,7 @@ nav a {
 }
 
 nav li:hover > a {
-  background-color: #cb38b5 ;
+  background-color: #b1199a ;
 }
 
 
@@ -151,6 +162,7 @@ h3 {
 	margin-left: 20px
 }
 
+/* team section */
 .team-section {
   padding: 50px 20px;
   background: #f9f9f9;
