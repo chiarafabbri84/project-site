@@ -97,7 +97,8 @@ main {
 }
 
 h1 {
- font-family: 'Rampart One', cursive; 
+ font-family: 'Nunito', sans-serif; 
+  font-weight: bold;
   font-size: 3.5em;
   font-weight: 900;
   color: #8B0000;
