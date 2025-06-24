@@ -187,7 +187,11 @@ padding: 0 2vw;
 .section-title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-text-align: center;
+text-align: center !important;
+display: block;        /* assicura che sia un blocco */
+  width: 100%; 
+  margin-left: auto;
+  margin-right: auto;
 }
 .team-section {
   font-family: 'Nunito', sans-serif;
