@@ -207,16 +207,18 @@ h3 {
 
 
 /* Logo elenco puntato */
-.logo-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
+.logo-icon {
+  height: 20px;        /* Altezza fissa */
+  width: auto;         /* Larghezza proporzionale */
+  margin-right: 8px;
+  vertical-align: middle;
+  object-fit: contain; /* Mantiene proporzioni senza deformare */
+}
+
 }
 
 .logo-icon {
-  width: 24px;
+  width: 20px;
   height: auto;
   margin-right: 8px;
   vertical-align: middle;
@@ -227,6 +229,12 @@ h3 {
   color: #ce1bb3;
   font-weight: bold;
   transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+.logo-list {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  list-style: none; /* Facoltativo: toglie i pallini */
+  padding: 0;
 }
 
 .logo-item a:hover {
