@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 800px;
+  margin: 0 auto 1em auto;
+padding: 0 2vw;
 }
 
 body {
@@ -208,20 +211,20 @@ h3 {
 
 /* Logo elenco puntato */
 .logo-icon {
-  height: 20px;        /* Altezza fissa */
-  width: auto;         /* Larghezza proporzionale */
-  margin-right: 8px;
+  height: 24px;        /* Altezza fissa */
+  width: 40px;         /* Larghezza proporzionale */
+  margin-right: 12px;
   vertical-align: middle;
   object-fit: contain; /* Mantiene proporzioni senza deformare */
+  flex-shrink: 0;
 }
 
-}
-
-.logo-icon {
-  width: 20px;
-  height: auto;
-  margin-right: 8px;
-  vertical-align: middle;
+.logo-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
 }
 
 .logo-item a {
@@ -239,11 +242,6 @@ h3 {
   line-height: 1.6;
   padding: padding: 0 2vw;
   font-weight: 400;
-}
-@media (min-width: 1400px) {
-  p {
-    padding: 0 2vw; /* margini laterali ancora più sottili su schermi molto larghi */
-  }
 }
 
 .logo-item a:hover {
