@@ -27,7 +27,7 @@ p {
 
 .no-underline-link {
   text-decoration: none;              /* rimuove la sottolineatura */
-  color: #cb38b5;                     /* rosa più scuro */
+  color: #ce1bb3;                     /* rosa più scuro */
   font-weight: bold;                  /* facoltativo */
   transition: color 0.3s ease;
 }
@@ -62,11 +62,11 @@ nav ul {
 
 nav ul li {
   position: relative;
+  height: 100%;
+  display: flex;
   font-family: "Nunito", sans-serif; /* Font Nunito */
-  color: white; 
   justify-content: center;
   text-decoration: none; 
-  padding: 0; 
   align-items: center; 
   font-size: 1.18em; 
   font-weight: normal;
