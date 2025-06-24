@@ -34,6 +34,8 @@ p {
 
 .no-underline-link:hover {
   color: #b1199a;                     /* ancora più scuro al passaggio */
+  text-decoration: underline;           /* mostra sottolineatura */
+  text-decoration-color: #b1199a;
 }
 
 
