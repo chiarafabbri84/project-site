@@ -238,8 +238,9 @@ padding: 0 2vw;
   font-weight: bold;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
+
+
 .logo-list {
-	.logo-list {
   font-family: 'Nunito', sans-serif;
   max-width: 800px;
   margin: 0 auto 1em auto;    /* uguale al paragrafo */
