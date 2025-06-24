@@ -73,6 +73,11 @@ nav li:hover > a {
   text-align: center;
   position: relative;
 }
+.title-container h1 {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
 
 main {
   padding: 20px;
