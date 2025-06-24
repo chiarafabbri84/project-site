@@ -15,7 +15,7 @@ p {
   margin: 0 auto 1em auto;
   text-align: justify;
   line-height: 1.6;
-  padding: padding: 0 2vw;
+  padding: 0 2vw;
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
 }
@@ -24,7 +24,6 @@ p {
     padding: 0 2vw; /* margini laterali ancora più sottili su schermi molto larghi */
   }
 }
-
 .no-underline-link {
   text-decoration: none;              /* rimuove la sottolineatura */
   color: #ce1bb3;                     /* rosa più scuro */
@@ -240,14 +239,21 @@ padding: 0 2vw;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 .logo-list {
+	.logo-list {
   font-family: 'Nunito', sans-serif;
-  list-style: none; /* Facoltativo: toglie i pallini */
- max-width: 800px;
-  margin: 0 auto 1em auto;
+  max-width: 800px;
+  margin: 0 auto 1em auto;    /* uguale al paragrafo */
+  padding: 0 2vw;              /* uguale al paragrafo */
   text-align: justify;
   line-height: 1.6;
-  padding: padding: 0 2vw;
   font-weight: 400;
+  list-style: none;            /* togli i pallini se vuoi */
+}
+
+	@media (min-width: 1400px) {
+  .logo-list {
+    padding: 0 2vw;  /* stesso padding del paragrafo */
+  }
 }
 
 .logo-item a:hover {
