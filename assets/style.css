@@ -16,8 +16,16 @@ p {
   text-align: justify;
   line-height: 1.6;
   padding: 0 20px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
 }
-
+p {
+  max-width: 60ch;         /* larghezza leggibile (in caratteri) */
+  margin: 0 auto;          /* centra la sezione */
+  padding: 0 5vw;          /* margini laterali dinamici */
+  text-align: justify;
+  line-height: 1.6;
+}
 
 /* Menu principale */
 nav {
