@@ -65,7 +65,7 @@ nav li:hover > a {
 /* Contenuto principale */
 
 .title-container {
-  background-image:url("https://commons.wikimedia.org/wiki/File:Palazzo_dei_Diamanti_in_rosa.jpg");
+  background-image: url("assets/rosa.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
