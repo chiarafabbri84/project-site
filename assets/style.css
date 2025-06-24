@@ -20,11 +20,11 @@ p {
   font-weight: 400;
 }
 p {
-  max-width: 60ch;         /* larghezza leggibile (in caratteri) */
-  margin: 0 auto;          /* centra la sezione */
-  padding: 0 5vw;          /* margini laterali dinamici */
   text-align: justify;
   line-height: 1.6;
+  max-width: 800px;     /* larghezza massima contenuta */
+  margin: 0 auto 1em auto; /* centra il paragrafo e aggiunge spazio in basso */
+  padding: 0 20px; 
 }
 
 /* Menu principale */
