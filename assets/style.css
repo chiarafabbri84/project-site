@@ -45,6 +45,8 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;       /* ← centrazione verticale */
+  height: 100%; 
 }
 
 nav ul li {
@@ -141,12 +143,12 @@ h2 {
 }
 
 h3 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2em;
-  font-weight: 500;
-  color: #8B0000;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-  margin-left: 20px
+  font-family: "Nunito", sans serif;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #cb38b5;
+	text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+	margin-left: 20px
 }
 
 .team-section {
