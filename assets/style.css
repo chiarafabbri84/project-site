@@ -48,20 +48,21 @@ nav {
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* centra il contenuto dentro nav */
   z-index: 1000;
 }
 
 nav ul {
-	
-  max-width: 900px;   /* o la larghezza che preferisci */
+  max-width: 900px;
   margin: 0 auto;
   padding: 0;
   display: flex;
+  justify-content: center; /* centra i li dentro ul */
   align-items: center;
   height: 100%;
-	list-style-type: none;
+  list-style-type: none;
 }
+
 
 nav ul li {
   position: relative;
@@ -264,7 +265,7 @@ padding: 0 2vw;
   text-decoration: underline;
 }
 
-.lista-speciale li {
+.lista-speciale {
   /* stili per i li dentro quella lista */
   max-width: 800px;
   margin: 0 auto 1em auto;
