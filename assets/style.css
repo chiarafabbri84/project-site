@@ -102,14 +102,14 @@ h1 {
   font-size: 3.5em;
   font-weight: 900;
   color: #8B0000;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
   text-align: center;
 }
 
 h2 {
 	font-family: "Nunito", sans serif;
 	font-size: 2.5em;
-	font-weight: 500;
+	font-weight: bold;
 	color: #cb38b5;
 	text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 	margin-left: 20px
@@ -168,7 +168,3 @@ h3 {
   max-width: 200px;
 }
 
-.team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
