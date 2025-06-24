@@ -13,7 +13,7 @@ body {
 
 /* Menu principale */
 nav {
-  position: fixed;
+  position: fixed
   top: 0;
   width: 100%;
   background-color: #da3cc2;
@@ -58,33 +58,9 @@ nav a {
 }
 
 nav li:hover > a {
-  background-color: #8B0000;
+  background-color: #cb38b5 ;
 }
 
-/* Menu a tendina */
-nav ul ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #8B0000;
-  padding: 0;
-  min-width: 180px;
-  flex-direction: column;
-}
-
-nav ul li:hover > ul {
-  display: flex;
-}
-
-nav ul ul li a {
-  padding: 8px 15px; 
-  font-size: 0.8em;
-}
-
-nav ul ul a:hover {
-  background-color: #6A0000;
-}
 
 /* Contenuto principale */
 main {
