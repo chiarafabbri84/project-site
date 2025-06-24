@@ -12,20 +12,19 @@ body {
 }
 p {
   max-width: 800px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 1em auto;
   text-align: justify;
   line-height: 1.6;
-  padding: 0 20px;
+  padding: padding: 0 2vw;
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
 }
-p {
-  text-align: justify;
-  line-height: 1.6;
-  max-width: 800px;     /* larghezza massima contenuta */
-  margin: 0 auto 1em auto; /* centra il paragrafo e aggiunge spazio in basso */
-  padding: 0 20px; 
+@media (min-width: 1400px) {
+  p {
+    padding: 0 2vw; /* margini laterali ancora più sottili su schermi molto larghi */
+  }
 }
+
 
 /* Menu principale */
 nav {
