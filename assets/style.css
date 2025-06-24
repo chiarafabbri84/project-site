@@ -34,7 +34,7 @@ nav ul {
 
 nav ul li {
   position: relative;
-  font-family: "Times New Roman", Times, serif; /* Font Times New Roman */
+  font-family: "Nunito", sans-serif; /* Font Nunito */
   color: white; 
   justify-content: center;
   text-decoration: none; 
