@@ -232,9 +232,18 @@ h3 {
 }
 .logo-list {
   font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
   list-style: none; /* Facoltativo: toglie i pallini */
-  padding: 0;
+ max-width: 800px;
+  margin: 0 auto 1em auto;
+  text-align: justify;
+  line-height: 1.6;
+  padding: padding: 0 2vw;
+  font-weight: 400;
+}
+@media (min-width: 1400px) {
+  p {
+    padding: 0 2vw; /* margini laterali ancora più sottili su schermi molto larghi */
+  }
 }
 
 .logo-item a:hover {
