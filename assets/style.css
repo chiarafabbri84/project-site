@@ -65,29 +65,23 @@ nav li:hover > a {
 /* Contenuto principale */
 
 body.home .title-container {
-  display: flex;
-  flex-direction: column;   /* per mantenere il testo su più righe se serve */
-  justify-content: center;  /* centra verticalmente */
-  align-items: center;      /* centra orizzontalmente */
-  height: 300px;            /* o l’altezza che preferisci */
-  background-image: url("assets/images/Palazz.jpg");
+ min-height: 300px;
+  background-image: url("images/Palazz.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 4rem 2rem;
+  text-align: center;
   position: relative;
 }
 body.methodology .title-container {
-  display: flex;
-  flex-direction: column;   /* per mantenere il testo su più righe se serve */
-  justify-content: center;  /* centra verticalmente */
-  align-items: center;      /* centra orizzontalmente */
-  height: 300px;            /* o l’altezza che preferisci */
-  background-image: url("assets/images/galleria.jpg");
+ min-height: 300px;
+  background-image: url("images/galleria.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 4rem 2rem;
+  text-align: center;
   position: relative;
 }
 .title-container h1 {
