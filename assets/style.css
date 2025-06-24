@@ -39,6 +39,7 @@ nav ul li {
   justify-content: center;
   text-decoration: none; 
   padding: 0; 
+  align-items: center;
   display: block; 
   font-size: 1.18em; 
   font-weight: normal;
@@ -53,6 +54,7 @@ nav a {
   display: block;
   color: white;
   text-decoration: none;
+  align-items: center;
   white-space: nowrap;
 }
 
@@ -70,6 +72,7 @@ body.home .title-container {
   background-position: center;
   background-repeat: no-repeat;
   padding: 4rem 2rem;
+  align-items: center;
   text-align: center;
   position: relative;
 }
