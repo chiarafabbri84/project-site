@@ -264,4 +264,13 @@ padding: 0 2vw;
   text-decoration: underline;
 }
 
-
+.lista-speciale li {
+  /* stili per i li dentro quella lista */
+  max-width: 800px;
+  margin: 0 auto 1em auto;
+  text-align: justify;
+  line-height: 1.6;
+  padding: 0 2vw;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
