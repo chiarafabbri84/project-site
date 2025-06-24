@@ -67,8 +67,7 @@ nav ul li {
   justify-content: center;
   text-decoration: none; 
   padding: 0; 
-  align-items: center;
-  display: block; 
+  align-items: center; 
   font-size: 1.18em; 
   font-weight: normal;
   transition: color 0.3s ease, background-color 0.3s ease; 
@@ -79,10 +78,13 @@ nav > ul > li {
 }
 
 nav a {
-  display: block;
+  display: flex; /* Cambiato da block a flex */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra orizzontalmente */
+  height: 100%; /* Fa occupare tutta l’altezza della navbar */
+  padding: 0 20px; /* Spazio orizzontale ai lati */
   color: white;
   text-decoration: none;
-  align-items: center;
   white-space: nowrap;
 }
 
