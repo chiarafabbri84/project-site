@@ -65,7 +65,7 @@ nav li:hover > a {
 /* Contenuto principale */
 
 .title-container {
-  background-image:url("assets/images/Palazz.jpg");
+  background-image:url("..assets/images/Palazz.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
