@@ -55,7 +55,6 @@ nav {
 nav ul {
 	
   max-width: 900px;   /* o la larghezza che preferisci */
-  width: 100%;
   margin: 0 auto;
   padding: 0;
   display: flex;
