@@ -205,3 +205,33 @@ h3 {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* stesso valore dell'originale */
 }
 
+
+/* Logo elenco puntato */
+.logo-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+}
+
+.logo-icon {
+  width: 24px;
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.logo-item a {
+  text-decoration: none;
+  color: #ce1bb3;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.logo-item a:hover {
+  color: #b1199a;
+  text-decoration: underline;
+}
+
+
