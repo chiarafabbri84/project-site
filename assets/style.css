@@ -18,7 +18,7 @@ nav {
   width: 100%;
   background-color: #6A0000;
   color: white;
-  height: 60px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,8 +36,9 @@ nav ul li {
   position: relative;
   font-family: "Times New Roman", Times, serif; /* Font Times New Roman */
   color: white; 
+  justify-content: center;
   text-decoration: none; 
-  padding: 1.2px 0; 
+  padding: 0; 
   display: block; 
   font-size: 1.18em; 
   font-weight: normal;
@@ -45,7 +46,7 @@ nav ul li {
 }
 
 nav > ul > li {
-  margin-right: 1rem;
+  margin: 0 1rem; ;
 }
 
 nav a {
