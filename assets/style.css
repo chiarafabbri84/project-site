@@ -133,6 +133,18 @@ body.methodology .title-container {
   position: relative;
 }
 
+body.sparqlqueries .title-container {
+  min-height: 400px;
+  background-image: url("images/cortile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+
 .title-container h1 {
   position: relative;
   z-index: 1;
