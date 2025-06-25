@@ -210,6 +210,7 @@ h3 {
 .sparql-code {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
+  font-weight: normal;
   border-radius: 8px;
   padding: 1em;
   font-family: monospace;
@@ -229,9 +230,9 @@ h3 {
 
 .sparql-code .keyword-main { color: #000000; font-weight: 900; } /* nero */
 /* funzioni/determinatori */
-.sparql-code .keyword-second { color: #ab47bc; font-weight: normal; } /* violetto */
-.sparql-code .keyword-regex { color: #1aade0; font-weight: normal; } /* azzurro */
-.sparql-code .keyword-label { color: #31c59d; font-weight: normal; } /* verdino */
+.sparql-code .keyword-second { color: #900dc6; font-weight: normal; } /* violetto */
+.sparql-code .keyword-regex { color: #1ab4d0; font-weight: normal; } /* azzurro */
+.sparql-code .keyword-label { color: #269b41; font-weight: normal; } /* verdino */
 .sparql-code .keyword-red { color: #d90000; font-weight: normal; } /* rosso */
 
 code {
