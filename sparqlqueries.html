@@ -69,7 +69,7 @@
 </div>
 	  
     <h3>🔍SPARQL query: finding our topic</h3>
-    <p> The first thing we wanted to check was if our chosen topic was present in the <strong><a href="http://wit.istc.cnr.it/arco"class="no-underline-link" target="_blank">Arco Knowledge Graph</a><strong>.</p>
+    <p> The first thing we wanted to check was if our chosen topic was present in the <strong><a href="http://wit.istc.cnr.it/arco"class="no-underline-link" target="_blank">ArCo Knowledge Graph</a><strong>.</p>
 					    
 	 <pre class="sparql-code"><code>
 <span class="keyword-main">PREFIX</span> rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
@@ -137,7 +137,7 @@
         </div>
 	<br>
 		 <h3>🔍SPARQL query: comparison with Wikidata</h3>
-		    <p>We wanted to compare the information available for our resource on Arco with the information available on <strong><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" class="no-underline-link" target="_blank">Wikidata</a></strong>. So, we ran the following query on <strong><a href="https://query.wikidata.org/" class="no-underline-link" target="_blank">Wikidata Query Service</a></strong> to find Fearrara's Palazzo dei Diamanti.</p>
+		    <p>We wanted to compare the information available for our resource on ArCo with the information available on <strong><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" class="no-underline-link" target="_blank">Wikidata</a></strong>. So, we ran the following query on <strong><a href="https://query.wikidata.org/" class="no-underline-link" target="_blank">Wikidata Query Service</a></strong> to find Fearrara's Palazzo dei Diamanti.</p>
 	<pre class="sparql-code"><code>
 <span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 <span class="keyword-main">PREFIX</span> wd: &lt;http://www.wikidata.org/entity/&gt;
@@ -161,19 +161,66 @@
 	<h3>Results</h3>
 		<p><strong><a href="https://query.wikidata.org/#PREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%09PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0A%09PREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0A%09SELECT%20DISTINCT%20%2a%0A%09WHERE%20%7B%20%0A%09%09%20%20%3Fmonuments%20wdt%3AP17%20wd%3AQ38%3B%0A%09%09%09%09%20%20wdt%3AP131%20wd%3AQ13362%3B%0A%09%09%09%09%20%20wdt%3AP1435%20wd%3AQ26971668%3B%0A%09%09%09%09%20%20rdfs%3Alabel%20%3Fmonument_name%20.%0A%09%09%20%20%3Fmonuments%20wdt%3AP131%20%3Fmoncity%20.%09%0A%09%09%20%20%3Fmoncity%20rdfs%3Alabel%20%3Fcity%20.%0A%09FILTER%20%28lang%28%3Fmonument_name%29%20%3D%20%22it%22%29%0A%09FILTER%20%28lang%28%3Fcity%29%20%3D%20%22it%22%29%0A%09FILTER%20%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20REGEX%28%3Fmonument_name%2C%20%22diamanti%22%2C%20%22i%22%29%0A%20%20%29%0A%7D%0A" class="no-underline-link" target="_blank"> Let's see the results!</a></strong>
 		<br>
-		We found out that <strong><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" class="no-underline-link" target="_blank">Wikidata</a></strong> had different properties and some of them have been used later.</p>
+		We found out that our topic in <strong><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" class="no-underline-link" target="_blank">Wikidata</a></strong> had different properties and information. Many pieces of information we gathered in this Knowledge Graph have been used to enrich <strong><a href="http://wit.istc.cnr.it/arco" class="no-underline-link" target="_blank">ArCo</a></strong>'s one.</p>
 		<div style="text-align: center;">
         <img src="assets/results/wiki.png" alt="Results of Wikidata query" style="max-width: 70%; height: auto;" />
         </div>
 	<br>
-	   
 <br>
 	  <h2>Gap identification</h2>
 <br>
-	  <p>
+	    <h3>1. Author</h3>
+	    <p>By looking at <strong><a href="https://www.wikidata.org/wiki/Q2047639" class="no-underline-link" target="_blank">Palazzo dei Diamanti in Wikidata</a></strong>, we found out that this knowledge graph contained the name of the architect who built this landmark. 
+	    		<div style="text-align: center;">
+        <img src="assets/results/biagio.png" alt="Results of Wikidata query" style="max-width: 70%; height: auto;" />
+        </div>
+	  We wanted to check if in <strong><a href="http://wit.istc.cnr.it/arco" class="no-underline-link" target="_blank">ArCo Knowledge Graph</a></strong> the author of Palazzo dei Diamanti was present.
+	    Therefore, we checked in SPARQL Query Editor.</p>
+	    <pre class="sparql-code"><code>
+<span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+<span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+<span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+<span class="keyword-main">SELECT</span> <span class="keyword-main">DISTINCT</span> <span class="keyword-label">?property</span> <span class="keyword-label">?propertyLabel</span> <span class="keyword-label">?author</span> <span class="keyword-label">?authorLabel</span>
+<span class="keyword-main">WHERE</span> {
+  <span class="keyword-label">?property</span> <span class="keyword-main">a</span> arco:<span class="keyword-second">ArchitecturalOrLandscapeHeritage</span> ;
+            arco:<span class="keyword-second">uniqueIdentifier</span> <span class="keyword-red">"0800201602"</span> ;
+            a-cd:<span class="keyword-second">hasAuthor</span> <span class="keyword-label">?author</span> .
+  
+  <span class="keyword-main">OPTIONAL</span> { <span class="keyword-label">?property</span> rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?propertyLabel</span> }
+  <span class="keyword-main">OPTIONAL</span> { <span class="keyword-label">?author</span> rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?authorLabel</span> }
+}
+</code></pre>
+
+	    <h3>Results</h3>
+		<p><strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3FpropertyLabel+%3Fauthor+%3FauthorLabel%0D%0AWHERE+%7B%0D%0A++%3Fproperty+a+arco%3AArchitecturalOrLandscapeHeritage+%3B%0D%0A++++++++++++arco%3AuniqueIdentifier+%220800201602%22+%3B%0D%0A++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%0D%0A++OPTIONAL+%7B+%3Fproperty+rdfs%3Alabel+%3FpropertyLabel+%7D%0D%0A++OPTIONAL+%7B+%3Fauthor+rdfs%3Alabel+%3FauthorLabel+%7D%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">It gave us no results.</a></strong>
+		<br>
+			At first, we thought that the query was wrong. To check if that was the case, we tried to check for Teatro Regio's author.
+		</p>
+	    <pre class="sparql-code"><code>
+<span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+<span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+<span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+<span class="keyword-main">SELECT</span> <span class="keyword-main">DISTINCT</span> <span class="keyword-label">?property</span> <span class="keyword-label">?propertyLabel</span> <span class="keyword-label">?author</span> <span class="keyword-label">?authorLabel</span>
+<span class="keyword-main">WHERE</span> {
+  <span class="keyword-label">?property</span> <span class="keyword-main">a</span> arco:<span class="keyword-second">ArchitecturalOrLandscapeHeritage</span> ;
+            arco:<span class="keyword-second">uniqueIdentifier</span> <span class="keyword-red">"0800125745"</span> ;
+            a-cd:<span class="keyword-second">hasAuthor</span> <span class="keyword-label">?author</span> .
+  
+  <span class="keyword-main">OPTIONAL</span> { <span class="keyword-label">?property</span> rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?propertyLabel</span> }
+  <span class="keyword-main">OPTIONAL</span> { <span class="keyword-label">?author</span> rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?authorLabel</span> }
+}
+</code></pre>
+<p>Here, we found some <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3FpropertyLabel+%3Fauthor+%3FauthorLabel%0D%0AWHERE+%7B%0D%0A++%3Fproperty+a+arco%3AArchitecturalOrLandscapeHeritage+%3B%0D%0A++++++++++++arco%3AuniqueIdentifier+%220800125745%22+%3B%0D%0A++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%0D%0A++OPTIONAL+%7B+%3Fproperty+rdfs%3Alabel+%3FpropertyLabel+%7D%0D%0A++OPTIONAL+%7B+%3Fauthor+rdfs%3Alabel+%3FauthorLabel+%7D%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong>, so we had the confirmation that the query was correct.
+</p>
+	    <img src="assets/results/bettoli.png" alt="Results of Wikidata query" style="max-width: 70%; height: auto;" />
+        </div>
+	    Now, we had our first gap: the creator and author of Palazzo dei Diamanti.
+	<br>
 
 		  
-	  </p>
+	  
 <div id="footer_wrap">
  <footer class="inner">
         <p style="color: black; font-size: 1.1em;">Website published with <a href="https://pages.github.com" class="no-underline-link github-pages-link-hover" style="color: black;"> GitHub Pages</a></p>
