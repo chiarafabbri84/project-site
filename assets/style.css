@@ -21,6 +21,18 @@ p {
   font-weight: 400;
 }
 
+ul {
+  max-width: 800px;
+  text-align: justify;
+  line-height: 1.6;
+  padding: 0 2vw;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  margin-left: 2em;
+  list-style-type: disc;
+}
+
+
 .logo-list {
   font-family: 'Nunito', sans-serif;
   max-width: 800px;
