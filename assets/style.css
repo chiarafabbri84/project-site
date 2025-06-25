@@ -282,12 +282,13 @@ p, .logo-list {
   list-style: none;            /* togli i pallini se vuoi */
 }
 
-	@media (min-width: 1400px) {
-  p {
-    max-width: 1200px; /* più largo del 800px */
-    padding: 0 1vw;
+@media (min-width: 1400px) {
+  .logo-list {
+    max-width: 1200px;  /* stessa larghezza del paragrafo */
+    padding: 0 1vw;     /* stesso padding del paragrafo */
   }
 }
+
 
 .logo-item a:hover {
   color: #b1199a;
