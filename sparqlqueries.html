@@ -69,11 +69,11 @@
 				<br>
 	    <section class="query-container">
     <h3>🔍SPARQL query:</h3>
-    <textarea placeholder=""PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX arco: <https://w3id.org/arco/ontology/arco/>
-PREFIX a-cd: <https://w3id.org/arco/ontology/context-description/>
-PREFIX clv: <https://w3id.org/italia/onto/CLV/>
+    <textarea oninput="autoResize(this)">PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+PREFIX a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+PREFIX clv: &lt;https://w3id.org/italia/onto/CLV/&gt;
 
 SELECT DISTINCT ?entity ?label ?city
 WHERE {
@@ -81,14 +81,25 @@ WHERE {
           rdfs:label ?label .
 
   ?address clv:hasAddressArea ?city .
-  
+
   FILTER(REGEX(?label, "Palazzo dei Diamanti", "i"))
   FILTER(REGEX(STR(?city), "Ferrara", "i"))
 }
-LIMIT 100"></textarea>
+LIMIT 100</textarea>
     <p style="text-align:center; font-style: italic; color: #666;">
     </p>
   </section>
+	    <script>
+  function autoResize(textarea) {
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight + 'px';
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("textarea").forEach(autoResize);
+  });
+</script>
+
 		
 	
 	
