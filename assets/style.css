@@ -22,7 +22,7 @@ p {
 @media (min-width: 1400px) {
   p {
     max-width: 1200px; /* più largo del 800px */
-    padding: 0 2vw;    /* o magari 1vw per meno padding */
+    padding: 0 1vw;
   }
 }
 
