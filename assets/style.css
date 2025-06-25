@@ -144,16 +144,17 @@ h1 {
 }
 
 h2 {
-	 max-width: 800px;
-        margin: 0 auto 1em auto;
-        padding: 0 2vw;
-	font-family: "Nunito", sans serif;
-	font-size: 2.5em;
-	font-weight: bold;
-	color: #cb38b5;
-	text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-	margin-left: 20px
+  padding: 0 2vw;
+  margin: 0 10vw 1em 10vw; /* sposta tutto più verso il centro */
+  font-family: "Nunito", sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #cb38b5;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  text-align: left; /* mantiene l’allineamento a sinistra */
 }
+
+
 
 .wd-id a {
     all: unset; 
