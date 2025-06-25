@@ -98,9 +98,12 @@
 	    </p>
 	    <h3>Results</h3>
 		<p><strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+clv%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FCLV%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fentity+%3Flabel+%3Fcity%0D%0AWHERE+%7B%0D%0A++%3Fentity+a+arco%3AImmovableCulturalProperty+%3B%0D%0A++++++++++rdfs%3Alabel+%3Flabel+.%0D%0A%0D%0A++%3Faddress+clv%3AhasAddressArea+%3Fcity+.%0D%0A++%0D%0A++FILTER%28REGEX%28%3Flabel%2C+%22Palazzo+dei+Diamanti%22%2C+%22i%22%29%29%0D%0A++FILTER%28REGEX%28STR%28%3Fcity%29%2C+%22Ferrara%22%2C+%22i%22%29%29%0D%0A%7D%0D%0ALIMIT+100%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank"> Let's see the results!</a></strong>
+		<br>
 		Firtsly, we used <code>LIMIT</code> 10, but we noticed that there were only results for <strong><a href="https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0500174229-bene-individuo" class="no-underline-link" target="_blank">Palazzo dei Diamanti in Verona</a></strong>. <br>
 		Therefore, we decided to expand the <code>LIMIT</code> to 100, and we found our chosen topic: <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Palazzo dei Diamanti in Ferrara</a></strong>.
-		
+		<div style="text-align: center;">
+        <img src="assets/images/results/1.jpg" alt="Results of the first query" style="max-width: 70%; height: auto;" />
+        </div>
 		</p>
 	   
 <br>
@@ -112,7 +115,7 @@
 	  </p>
 <div id="footer_wrap">
  <footer class="inner">
-        <p style="color: black; font-size: 1.1em;">Website published with <a href="https://pages.github.com" class="no-underline-link github-pages-link-hover" style="color: white;"> GitHub Pages</a></p>
+        <p style="color: black; font-size: 1.1em;">Website published with <a href="https://pages.github.com" class="no-underline-link github-pages-link-hover" style="color: black;"> GitHub Pages</a></p>
       </footer>
     </div>
 	
