@@ -72,26 +72,30 @@
     <p> The first thing we wanted to check was if our chosen topic was present in the <strong><a href="http://wit.istc.cnr.it/arco"class="no-underline-link" target="_blank">Arco Knowledge Graph</a><strong>.</p>
 				<br>  
 	    <h3>🔍SPARQL query:</h3>
-	    <pre class="sparql-code"><code>
+	 <pre class="sparql-code"><code>
+<span class="keyword">PREFIX</span> rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+<span class="keyword">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<span class="keyword">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+<span class="keyword">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+<span class="keyword">PREFIX</span> clv: &lt;https://w3id.org/italia/onto/CLV/&gt;
 
-PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-PREFIX arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
-PREFIX a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
-PREFIX clv: &lt;https://w3id.org/italia/onto/CLV/&gt;
-
-SELECT DISTINCT ?entity ?label ?city
-WHERE {
+<span class="keyword">SELECT DISTINCT</span> ?entity ?label ?city
+<span class="keyword">WHERE</span> {
   ?entity a arco:ImmovableCulturalProperty ;
           rdfs:label ?label .
 
   ?address clv:hasAddressArea ?city .
   
-  FILTER(REGEX(?label, "Palazzo dei Diamanti", "i"))
-  FILTER(REGEX(STR(?city), "Ferrara", "i"))
+  <span class="keyword">FILTER</span>(REGEX(?label, "Palazzo dei Diamanti", "i"))
+  <span class="keyword">FILTER</span>(REGEX(STR(?city), "Ferrara", "i"))
 }
-LIMIT 100
+<span class="keyword">LIMIT</span> 100
 </code></pre>
+
+	    <p><code>DISTINCT</code>: removes duplicate results.<br>
+		<code>FILTER</code>: restricts the results based on conditions.<br>
+		    <code>REGEX</code>: checks whether a string value matches a given regular expression pattern.<br>
+	    </p>
 	    
 	    
 	    
