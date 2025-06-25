@@ -210,17 +210,35 @@ h4 {
 }
 
 /* text area queries */
+/* Contenitore centrato per textarea */
+.query-container {
+  max-width: 800px;
+  margin: 0 auto 2em auto;
+  padding: 0 2vw;
+}
+
+/* Textarea elegante e centrata */
 textarea {
   width: 100%;
-  height: 200px;
-  padding: 10px;
+  height: 250px;
+  padding: 15px;
   font-family: monospace;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  font-size: 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
   resize: vertical;
-  margin-bottom: 15px;
+  color: #333;
+  transition: border-color 0.3s ease;
 }
+
+textarea:focus {
+  border-color: #ce1bb3;
+  outline: none;
+  box-shadow: 2px 2px 8px rgba(206, 27, 179, 0.3);
+}
+
 
 /* team section */
 .team-section {
