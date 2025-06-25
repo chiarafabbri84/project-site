@@ -227,12 +227,12 @@ h3 {
   font-weight: bold;
 }
 
-.sparql-code .keyword-main { color: #000000; font-weight: bold; }
+.sparql-code .keyword-main { color: #000000; font-weight: 900; } /* nero */
 /* funzioni/determinatori */
-.sparql-code .keyword-second { color: #ab47bc; font-weight: normal; }
-.sparql-code .keyword-regex { color: #1aade0; font-weight: normal; }
-.sparql-code .keyword-label { color: #31c59d; font-weight: normal; }
-.sparql-code .keyword-red { color: #d90000; font-weight: normal; } 
+.sparql-code .keyword-second { color: #ab47bc; font-weight: normal; } /* violetto */
+.sparql-code .keyword-regex { color: #1aade0; font-weight: normal; } /* azzurro */
+.sparql-code .keyword-label { color: #31c59d; font-weight: normal; } /* verdino */
+.sparql-code .keyword-red { color: #d90000; font-weight: normal; } /* rosso */
 
 code {
   background-color: #eee;
