@@ -21,9 +21,11 @@ p {
 }
 @media (min-width: 1400px) {
   p {
-    padding: 0 2vw; /* margini laterali ancora più sottili su schermi molto larghi */
+    max-width: 1200px; /* più largo del 800px */
+    padding: 0 2vw;    /* o magari 1vw per meno padding */
   }
 }
+
 .no-underline-link {
   text-decoration: none;              /* rimuove la sottolineatura */
   color: #ce1bb3;                     /* rosa più scuro */
