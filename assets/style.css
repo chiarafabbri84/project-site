@@ -207,31 +207,25 @@ h3 {
   padding: 0 2vw;
 }
 
-/* Textarea elegante e centrata */
-textarea {
-  width: 100%;
-  min-height: 200px;
+.sparql-code {
+  background-color: #f4f4f4;
+  color: #333;
   padding: 15px;
-  font-family: monospace;
-  font-size: 15px;
-  border: 1.5px solid #ccc;
   border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-  resize: none;         /* disabilita l'azione manuale di ridimensionamento */
-  overflow: hidden;     /* nasconde le barre di scorrimento */
-  transition: border-color 0.3s ease;
-  max-width: 1000px;
-  display: block;
-  margin: 0 auto 20px auto;
+  font-family: monospace;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  max-width: 90%;
+  margin: 2em auto;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-
-
-textarea:focus {
-  border-color: #ce1bb3;
-  outline: none;
-  box-shadow: 2px 2px 8px rgba(206, 27, 179, 0.3);
+code {
+  background-color: #eee;
+  padding: 2px 4px;
+  font-family: monospace;
+  border-radius: 4px;
+  color: #c7254e;
 }
 
 
@@ -330,11 +324,14 @@ textarea:focus {
 
 /* immagini */
 .centered-image {
-  text-align: center;
   margin: 2em auto;
+  text-align: center; /* facoltativo, utile se dentro c'è altro testo */
 }
 
 .centered-image img {
+  display: block;       /* questo è fondamentale */
+  margin: 0 auto;       /* questo centra l’immagine */
   max-width: 70%;
   height: auto;
 }
+
