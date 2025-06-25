@@ -19,12 +19,16 @@ p {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
 }
+
+
 @media (min-width: 1400px) {
-  p {
-    max-width: 1200px; /* più largo del 800px */
-    padding: 0 1vw;
+  p, .logo-list {
+    max-width: 1200px;
+    padding: 0 clamp(10px, 1vw, 20px); /* padding minimo 10px, massimo 20px */
   }
 }
+
+
 
 .no-underline-link {
   text-decoration: none;              /* rimuove la sottolineatura */
@@ -280,13 +284,6 @@ p, .logo-list {
   line-height: 1.6;
   font-weight: 400;
   list-style: none;            /* togli i pallini se vuoi */
-}
-
-@media (min-width: 1400px) {
-  .logo-list {
-    max-width: 1200px;  /* stessa larghezza del paragrafo */
-    padding: 0 1vw;     /* stesso padding del paragrafo */
-  }
 }
 
 
