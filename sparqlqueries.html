@@ -217,7 +217,7 @@
 <p>Here, we found our <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3FpropertyLabel+%3Fauthor+%3FauthorLabel%0D%0AWHERE+%7B%0D%0A++%3Fproperty+a+arco%3AArchitecturalOrLandscapeHeritage+%3B%0D%0A++++++++++++arco%3AuniqueIdentifier+%220800125745%22+%3B%0D%0A++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%0D%0A++OPTIONAL+%7B+%3Fproperty+rdfs%3Alabel+%3FpropertyLabel+%7D%0D%0A++OPTIONAL+%7B+%3Fauthor+rdfs%3Alabel+%3FauthorLabel+%7D%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong>, so we had the confirmation that the query was correct.
 </p>
 	    <div style="text-align: center;">
-	    <img src="assets/results/bettoli.png" alt="Results of Wikidata query" style="max-width: 70%; height: auto;" />
+	    <img src="assets/results/bettoli.png" alt="Results Teatro Regio - author" style="max-width: 70%; height: auto;" />
         </div>
 	    <br>
 	    <p>Now, we had our first gap to enrich: the creator and author of <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong>.
@@ -227,10 +227,10 @@
 	    <p>On the <strong><a href="http://wit.istc.cnr.it/arco/lode/extract?lang=en&url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/arco/arco.owl" class="no-underline-link" target="_blank">Arco ontology</a></strong> we found the class "commission"; we thought it was something important to specify because Ferrara is famous for the <strong><a href="https://en.wikipedia.org/wiki/House_of_Este" class="no-underline-link" target="_blank">Este family</a></strong> who lived there and commissioned many historical landmarks in the area.
 	    </p>
 	    <div style="text-align: center;">
-	    <img src="assets/results/ontology.png" alt="Results of Wikidata query" style="max-width: 70%; height: auto;" />
+	    <img src="assets/results/ontology.png" alt="commission" style="max-width: 50%; height: auto;" />
         </div>
 	    <br>
-		<p>So, we wanted to check if on <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">our resource the commissioner was present.</p>
+		<p>So, we wanted to check if on <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">our resource</a></strong> the commissioner was present.</p>
 
 	    <pre class="sparql-code"><code>
 <span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
@@ -247,7 +247,7 @@
 <br>
 	<h3>Results</h3>
 		<div style="text-align: center;">
-	    <img src="assets/results/false.png" alt="Results of Wikidata query" style="max-width: 70%; height: auto;" />
+	    <img src="assets/results/false.png" alt="Result false" style="max-width: 70%; height: auto;" />
         </div>
 	<p>We discovered that the commissioner wasn't present, so it gave us "false" as result.</p>
 		  
