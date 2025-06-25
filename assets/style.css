@@ -227,14 +227,20 @@ h3 {
   font-weight: bold;
 }
 
+.sparql-code .keyword-main { color: #000000; font-weight: bold; }
+/* funzioni/determinatori */
+.sparql-code .keyword-second { color: #ab47bc; font-weight: normal; }
+.sparql-code .keyword-regex { color: #1aade0; font-weight: normal; }
+.sparql-code .keyword-label { color: #31c59d; font-weight: normal; }
+
+
 code {
   background-color: #eee;
   padding: 2px 4px;
   font-family: monospace;
   border-radius: 4px;
-  color: #c7254e;
+  color: #000000;
 }
-
 
 /* team section */
 .team-section {
