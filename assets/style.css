@@ -232,7 +232,7 @@ h3 {
 .sparql-code .keyword-second { color: #ab47bc; font-weight: normal; }
 .sparql-code .keyword-regex { color: #1aade0; font-weight: normal; }
 .sparql-code .keyword-label { color: #31c59d; font-weight: normal; }
-
+.sparql-code .keyword-red { color: #d90000; font-weight: normal; } 
 
 code {
   background-color: #eee;
