@@ -70,8 +70,7 @@
 	  
     <h3>🔍SPARQL query: finding our topic</h3>
     <p> The first thing we wanted to check was if our chosen topic was present in the <strong><a href="http://wit.istc.cnr.it/arco"class="no-underline-link" target="_blank">Arco Knowledge Graph</a><strong>.</p>
-				<br>  
-	    
+					    
 	 <pre class="sparql-code"><code>
 <span class="keyword-main">PREFIX</span> rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
 <span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
@@ -106,9 +105,9 @@
         </div>
 	    <br>
 	    <h3>🔍SPARQL query: finding another landmark with more properties</h3>
-	    <p>Since we noticed that many properties were missing in our topic resource page, we decided to compare this resource to another famous landmark of <strong><a href="https://it.wikipedia.org/wiki/Emilia-Romagna class="no-underline-link" target="_blank">Emilia Romagna</a></strong>: the <strong><a href="https://it.wikipedia.org/wiki/Teatro_Regio_(Parma)" class="no-underline-link" target="_blank">Teatro Regio in Parma</a></strong>.
-	    So, we ran the same SPARQL query, but changing the city and the label. </p>
-	    <br>	     
+	    <p>Since we noticed that many properties were missing in our topic resource page, we decided to compare this resource to another famous landmark of <strong><a href="https://it.wikipedia.org/wiki/Emilia-Romagna" class="no-underline-link" target="_blank">Emilia Romagna</a></strong>: the <strong><a href="https://it.wikipedia.org/wiki/Teatro_Regio_(Parma)" class="no-underline-link" target="_blank">Teatro Regio in Parma</a></strong>.
+	    So, we ran the same SPARQL query, but changed the city and the label. </p>
+	         
 	    <pre class="sparql-code"><code>
 <span class="keyword-main">PREFIX</span> rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
 <span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
@@ -126,17 +125,47 @@
   <span class="keyword-main">FILTER</span>(<span class="keyword-regex">REGEX</span>(<span class="keyword-label">?label</span>, "Teatro Regio", "i"))
   <span class="keyword-main">FILTER</span>(<span class="keyword-regex">REGEX</span>(STR(<span class="keyword-label">?city</span>), "Parma", "i"))
 }
-<span class="keyword-main">LIMIT</span> <span class="keyword-red">100</span>
+<span class="keyword-main">LIMIT</span> <span class="keyword-red">10</span>
 </code></pre>
 	    </p>
 	    <h3>Results</h3>
 		<p><strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+clv%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FCLV%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fentity+%3Flabel+%3Fcity%0D%0AWHERE+%7B%0D%0A++%3Fentity+a+arco%3AImmovableCulturalProperty+%3B%0D%0A++++++++++rdfs%3Alabel+%3Flabel+.%0D%0A%0D%0A++%3Faddress+clv%3AhasAddressArea+%3Fcity+.%0D%0A++%0D%0A++FILTER%28REGEX%28%3Flabel%2C+%22Teatro+Regio%22%2C+%22i%22%29%29%0D%0A++FILTER%28REGEX%28STR%28%3Fcity%29%2C+%22Parma%22%2C+%22i%22%29%29%0D%0A%7D%0D%0ALIMIT+100%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank"> Let's see the results!</a></strong>
 		<br>
-		We noticed that this resource had many more properties that could have been useful for our enrichment.
+		We noticed that this resource had many more properties that could have been useful for our enrichment. </p>
 		<div style="text-align: center;">
-        <img src="assets/results/2.png" alt="Results of the first query" style="max-width: 70%; height: auto;" />
+        <img src="assets/results/2.png" alt="Results of the second query" style="max-width: 70%; height: auto;" />
         </div>
-		</p>
+	<br>
+		 <h3>🔍SPARQL query: comparison with Wikidata</h3>
+		    <p>We wanted to compare the information available for our resource on Arco with the information available on <strong><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" class="no-underline-link" target="_blank">Wikidata</a></strong>. So, we ran the following query on <strong><a href="https://query.wikidata.org/" class="no-underline-link" target="_blank">Wikidata Query Service</a></strong> to find Fearrara's Palazzo dei Diamanti.</p>
+	<pre class="sparql-code"><code>
+<span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<span class="keyword-main">PREFIX</span> wd: &lt;http://www.wikidata.org/entity/&gt;
+<span class="keyword-main">PREFIX</span> wdt: &lt;http://www.wikidata.org/prop/direct/&gt;
+
+<span class="keyword-main">SELECT</span> <span class="keyword-main">DISTINCT</span> <span class="keyword-label">*</span>
+<span class="keyword-main">WHERE</span> { 
+  <span class="keyword-label">?monuments</span> wdt:<span class="keyword-second">P17</span> wd:<span class="keyword-second">Q38</span> ;
+             wdt:<span class="keyword-second">P131</span> wd:<span class="keyword-second">Q13362</span> ;
+             wdt:<span class="keyword-second">P1435</span> wd:<span class="keyword-second">Q26971668</span> ;
+             rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?monument_name</span> .
+
+  <span class="keyword-label">?monuments</span> wdt:<span class="keyword-second">P131</span> <span class="keyword-label">?moncity</span> .	
+  <span class="keyword-label">?moncity</span> rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?city</span> .
+
+  <span class="keyword-main">FILTER</span>(lang(<span class="keyword-label">?monument_name</span>) = "it")
+  <span class="keyword-main">FILTER</span>(lang(<span class="keyword-label">?city</span>) = "it")
+  <span class="keyword-main">FILTER</span>(<span class="keyword-regex">REGEX</span>(<span class="keyword-label">?monument_name</span>, "diamanti", "i"))
+}
+</code></pre>
+	<h3>Results</h3>
+		<p><strong><a href="https://query.wikidata.org/#PREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%09PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0A%09PREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0A%09SELECT%20DISTINCT%20%2a%0A%09WHERE%20%7B%20%0A%09%09%20%20%3Fmonuments%20wdt%3AP17%20wd%3AQ38%3B%0A%09%09%09%09%20%20wdt%3AP131%20wd%3AQ13362%3B%0A%09%09%09%09%20%20wdt%3AP1435%20wd%3AQ26971668%3B%0A%09%09%09%09%20%20rdfs%3Alabel%20%3Fmonument_name%20.%0A%09%09%20%20%3Fmonuments%20wdt%3AP131%20%3Fmoncity%20.%09%0A%09%09%20%20%3Fmoncity%20rdfs%3Alabel%20%3Fcity%20.%0A%09FILTER%20%28lang%28%3Fmonument_name%29%20%3D%20%22it%22%29%0A%09FILTER%20%28lang%28%3Fcity%29%20%3D%20%22it%22%29%0A%09FILTER%20%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20REGEX%28%3Fmonument_name%2C%20%22diamanti%22%2C%20%22i%22%29%0A%20%20%29%0A%7D%0A" class="no-underline-link" target="_blank"> Let's see the results!</a></strong>
+		<br>
+		We found out that <strong><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" class="no-underline-link" target="_blank">Wikidata</a></strong> had different properties and some of them have been used later.</p>
+		<div style="text-align: center;">
+        <img src="assets/results/wiki.png" alt="Results of Wikidata query" style="max-width: 70%; height: auto;" />
+        </div>
+	<br>
 	   
 <br>
 	  <h2>Gap identification</h2>
