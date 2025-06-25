@@ -259,6 +259,17 @@ h3 {
   text-decoration: underline;
 }
 
+.logo-list {
+  font-family: 'Nunito', sans-serif;
+  max-width: none;        /* togli max-width */
+  margin: 0 0 1em 0;      /* niente margine auto, quindi non centra */
+  padding: 0 2vw;         /* mantiene padding orizzontale */
+  text-align: justify;
+  line-height: 1.6;
+  font-weight: 400;
+  list-style: none;
+}
+
 .lista-speciale {
   max-width: 800px;
   margin: 0 auto 1em auto;
