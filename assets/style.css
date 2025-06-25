@@ -8,8 +8,9 @@
 body {
   font-family: Arial, sans-serif;
   padding-top: 60px; 
-  background-color: #f5f5f5
+  background-color: #f5f5f5;
 }
+
 p {
   max-width: 800px;
   margin: 0 auto 1em auto;
@@ -20,15 +21,23 @@ p {
   font-weight: 400;
 }
 
+.logo-list {
+  font-family: 'Nunito', sans-serif;
+  max-width: 800px;
+  margin: 0 auto 1em auto;
+  padding: 0 2vw;
+  text-align: justify;
+  line-height: 1.6;
+  font-weight: 400;
+  list-style: none;
+}
 
 @media (min-width: 1400px) {
   p, .logo-list {
     max-width: 1200px;
-    padding: 0 clamp(10px, 1vw, 20px); /* padding minimo 10px, massimo 20px */
+    padding: 0 1vw;
   }
 }
-
-
 
 .no-underline-link {
   text-decoration: none;              /* rimuove la sottolineatura */
@@ -39,10 +48,9 @@ p {
 
 .no-underline-link:hover {
   color: #b1199a;                     /* ancora più scuro al passaggio */
-  text-decoration: underline;           /* mostra sottolineatura */
+  text-decoration: underline;         /* mostra sottolineatura */
   text-decoration-color: #b1199a;
 }
-
 
 /* Menu principale */
 nav {
@@ -69,7 +77,6 @@ nav ul {
   list-style-type: none;
 }
 
-
 nav ul li {
   position: relative;
   height: 100%;
@@ -84,7 +91,7 @@ nav ul li {
 }
 
 nav > ul > li {
-  margin: 0 1rem; ;
+  margin: 0 1rem;
 }
 
 nav a {
@@ -99,14 +106,12 @@ nav a {
 }
 
 nav li:hover > a {
-  background-color: #b1199a ;
+  background-color: #b1199a;
 }
 
-
 /* Contenuto principale */
-
 body.home .title-container {
- min-height: 400px;
+  min-height: 400px;
   background-image: url("images/Palazz.jpg");
   background-size: cover;
   background-position: center;
@@ -116,8 +121,9 @@ body.home .title-container {
   text-align: center;
   position: relative;
 }
+
 body.methodology .title-container {
- min-height: 400px;
+  min-height: 400px;
   background-image: url("images/galleria.jpg");
   background-size: cover;
   background-position: center;
@@ -126,22 +132,12 @@ body.methodology .title-container {
   text-align: center;
   position: relative;
 }
-body.sparqlqueries .title-container {
- min-height: 400px;
-  background-image: url("images/cortile.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 4rem 2rem;
-  text-align: center;
-  position: relative;
-}
+
 .title-container h1 {
   position: relative;
   z-index: 1;
   color: white;
 }
-
 
 main {
   padding: 20px;
@@ -149,12 +145,11 @@ main {
 
 h1 {
   max-width: 800px;
-   margin: 0 auto 1em auto;
-     padding: 0 2vw;
-   font-family: 'Nunito', sans-serif; 
-  font-weight: bold;
-  font-size: 3.5em;
+  margin: 0 auto 1em auto;
+  padding: 0 2vw;
+  font-family: 'Nunito', sans-serif; 
   font-weight: 900;
+  font-size: 3.5em;
   color: #8B0000;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
   text-align: center;
@@ -168,30 +163,28 @@ h2 {
   font-weight: bold;
   color: #cb38b5;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-  text-align: left; /* mantiene l’allineamento a sinistra */
+  text-align: left;
 }
 
-
-
 .wd-id a {
-    all: unset; 
-    font-size: 0.5em;
-    margin-left: 0.75em;
-    font-family: 'Playfair Display', serif;
-    color: #444444;
-    font-weight: normal;
-    cursor: pointer;
+  all: unset; 
+  font-size: 0.5em;
+  margin-left: 0.75em;
+  font-family: 'Playfair Display', serif;
+  color: #444444;
+  font-weight: normal;
+  cursor: pointer;
 }
 
 h3 {
-   padding: 0 2vw;
-  margin: 0 10vw 1em 10vw; /* sposta tutto più verso il centro */
+  padding: 0 2vw;
+  margin: 0 10vw 1em 10vw;
   font-family: "Nunito", sans-serif;
   font-size: 2.5em;
   font-weight: bold;
   color: #cb38b5;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-  text-align: left; /* mantiene l’allineamento a sinistra */
+  text-align: left;
 }
 
 /* team section */
@@ -199,25 +192,22 @@ h3 {
   padding: 50px 20px;
   background: #f9f9f9;
   text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700; /* grassetto */
 }
 
 .section-title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-text-align: center !important;
-display: block;        /* assicura che sia un blocco */
+  text-align: center !important;
+  display: block;
   width: 100%; 
   margin-left: auto;
   margin-right: auto;
 }
-.team-section {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700; /* grassetto */
-}
 
 .team-grid {
   display: grid;
-  /* 3 colonne larghe uguali, con spaziatura */
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
   justify-items: center;
@@ -233,11 +223,11 @@ display: block;        /* assicura che sia un blocco */
   width: 100%;
   max-width: 200px;
 }
+
 .team-card:hover {
   transform: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* stesso valore dell'originale */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Logo elenco puntato */
 .logo-icon {
@@ -249,20 +239,10 @@ display: block;        /* assicura che sia un blocco */
   flex-shrink: 0;
 }
 
-p, .logo-list {
-  max-width: 800px;
-  margin: 0 auto 1em auto;
-  padding: 0 2vw;
-  text-align: justify;
-  line-height: 1.6;
-  font-weight: 400;
-}
-
 .logo-item {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-	padding: 0;         
   font-family: 'Nunito', sans-serif;
   font-size: 1rem;
 }
@@ -274,26 +254,12 @@ p, .logo-list {
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-
-.logo-list {
-  font-family: 'Nunito', sans-serif;
-  max-width: 800px;
-  margin: 0 auto 1em auto;    /* uguale al paragrafo */
-  padding: 0 2vw;              /* uguale al paragrafo */
-  text-align: justify;
-  line-height: 1.6;
-  font-weight: 400;
-  list-style: none;            /* togli i pallini se vuoi */
-}
-
-
 .logo-item a:hover {
   color: #b1199a;
   text-decoration: underline;
 }
 
 .lista-speciale {
-  /* stili per i li dentro quella lista */
   max-width: 800px;
   margin: 0 auto 1em auto;
   text-align: justify;
