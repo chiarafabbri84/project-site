@@ -50,10 +50,10 @@
 
 <span class="keyword-main">SELECT</span> <span class="keyword-main">DISTINCT</span> <span class="keyword-label">?entity</span> <span class="keyword-label">?label</span> <span class="keyword-label">?city</span>
 <span class="keyword-main">WHERE</span> {
-  ?entity a arco:<span class="keyword-second">ImmovableCulturalProperty</span> ;
+  <span class="keyword-label">?entity</span> a arco:<span class="keyword-second">ImmovableCulturalProperty</span> ;
           rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?label</span> .
 
-  ?address clv:hasAddressArea <span class="keyword-label">?city</span> .
+  <span class="keyword-label">?address</span> clv:hasAddressArea <span class="keyword-label">?city</span> .
   
   <span class="keyword-main">FILTER</span>(<span class="keyword-regex">REGEX</span>(<span class="keyword-label">?label</span>, "Palazzo dei Diamanti", "i"))
   <span class="keyword-main">FILTER</span>(<span class="keyword-regex">REGEX</span>(STR(<span class="keyword-label">?city</span>), "Ferrara", "i"))
@@ -88,10 +88,10 @@
 
 <span class="keyword-main">SELECT</span> <span class="keyword-main">DISTINCT</span> <span class="keyword-label">?entity</span> <span class="keyword-label">?label</span> <span class="keyword-label">?city</span>
 <span class="keyword-main">WHERE</span> {
-  ?entity a arco:<span class="keyword-second">ImmovableCulturalProperty</span> ;
+  <span class="keyword-label">?entity</span> a arco:<span class="keyword-second">ImmovableCulturalProperty</span> ;
           rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?label</span> .
 
-  ?address clv:hasAddressArea <span class="keyword-label">?city</span> .
+  <span class="keyword-label">?address</span> clv:hasAddressArea <span class="keyword-label">?city</span> .
   
   <span class="keyword-main">FILTER</span>(<span class="keyword-regex">REGEX</span>(<span class="keyword-label">?label</span>, "Teatro Regio", "i"))
   <span class="keyword-main">FILTER</span>(<span class="keyword-regex">REGEX</span>(STR(<span class="keyword-label">?city</span>), "Parma", "i"))
