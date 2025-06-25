@@ -174,8 +174,8 @@
 	    		<div style="text-align: center;">
         <img src="assets/results/biagio.png" alt="Results of Wikidata query" style="max-width: 70%; height: auto;" />
         </div>
-	  We wanted to check if in <strong><a href="http://wit.istc.cnr.it/arco" class="no-underline-link" target="_blank">ArCo Knowledge Graph</a></strong> the author of Palazzo dei Diamanti was present.
-	    Therefore, we checked in SPARQL Query Editor.</p>
+	  <p>We wanted to check if in <strong><a href="http://wit.istc.cnr.it/arco" class="no-underline-link" target="_blank">ArCo Knowledge Graph</a></strong> the author of <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> was present.
+	    Therefore, we checked in <strong><a href="https://dati.cultura.gov.it/sparql" class="no-underline-link" target="_blank">SPARQL Query Editor</a></strong>.</p>
 	    <pre class="sparql-code"><code>
 <span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 <span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
@@ -195,7 +195,7 @@
 	    <h3>Results</h3>
 		<p><strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3FpropertyLabel+%3Fauthor+%3FauthorLabel%0D%0AWHERE+%7B%0D%0A++%3Fproperty+a+arco%3AArchitecturalOrLandscapeHeritage+%3B%0D%0A++++++++++++arco%3AuniqueIdentifier+%220800201602%22+%3B%0D%0A++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%0D%0A++OPTIONAL+%7B+%3Fproperty+rdfs%3Alabel+%3FpropertyLabel+%7D%0D%0A++OPTIONAL+%7B+%3Fauthor+rdfs%3Alabel+%3FauthorLabel+%7D%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">It gave us no results.</a></strong>
 		<br>
-			At first, we thought that the query was wrong. To check if that was the case, we tried to check for Teatro Regio's author.
+			At first, we thought that the query was wrong. To check if that was the case, we tried to check for <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800125745.html" class="no-underline-link" target="_blank">Teatro Regio</a></strong>'s author.
 		</p>
 	    <pre class="sparql-code"><code>
 <span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
@@ -212,11 +212,11 @@
   <span class="keyword-main">OPTIONAL</span> { <span class="keyword-label">?author</span> rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?authorLabel</span> }
 }
 </code></pre>
-<p>Here, we found some <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3FpropertyLabel+%3Fauthor+%3FauthorLabel%0D%0AWHERE+%7B%0D%0A++%3Fproperty+a+arco%3AArchitecturalOrLandscapeHeritage+%3B%0D%0A++++++++++++arco%3AuniqueIdentifier+%220800125745%22+%3B%0D%0A++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%0D%0A++OPTIONAL+%7B+%3Fproperty+rdfs%3Alabel+%3FpropertyLabel+%7D%0D%0A++OPTIONAL+%7B+%3Fauthor+rdfs%3Alabel+%3FauthorLabel+%7D%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong>, so we had the confirmation that the query was correct.
+<p>Here, we found our <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3FpropertyLabel+%3Fauthor+%3FauthorLabel%0D%0AWHERE+%7B%0D%0A++%3Fproperty+a+arco%3AArchitecturalOrLandscapeHeritage+%3B%0D%0A++++++++++++arco%3AuniqueIdentifier+%220800125745%22+%3B%0D%0A++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%0D%0A++OPTIONAL+%7B+%3Fproperty+rdfs%3Alabel+%3FpropertyLabel+%7D%0D%0A++OPTIONAL+%7B+%3Fauthor+rdfs%3Alabel+%3FauthorLabel+%7D%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong>, so we had the confirmation that the query was correct.
 </p>
 	    <img src="assets/results/bettoli.png" alt="Results of Wikidata query" style="max-width: 70%; height: auto;" />
         </div>
-	    Now, we had our first gap: the creator and author of Palazzo dei Diamanti.
+	    <p>Now, we had our first gap: the creator and author of <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong>.</p>
 	<br>
 
 		  
