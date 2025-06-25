@@ -208,16 +208,23 @@ h3 {
 }
 
 .sparql-code {
-  background-color: #f4f4f4;
-  color: #333;
-  padding: 15px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
   border-radius: 8px;
+  padding: 1em;
   font-family: monospace;
-  overflow-x: auto;
+  font-size: 0.95em;
   white-space: pre-wrap;
-  max-width: 90%;
+  overflow-x: auto;
+  max-width: 800px;
   margin: 2em auto;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  color: #333;
+}
+
+.sparql-code .keyword {
+  color: #8e44ad;
+  font-weight: bold;
 }
 
 code {
