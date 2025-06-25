@@ -193,16 +193,6 @@ h3 {
   margin: 0 10vw 1em 10vw;
   font-family: "Nunito", sans-serif;
   font-size: 2.5em;
-  font-weight: bold;
-  color: #cb38b5;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-  text-align: left;
-}
-h4 {
-  padding: 0 2vw;
-  margin: 0 10vw 1em 10vw;
-  font-family: "Nunito", sans-serif;
-  font-size: 2.5em;
   font-weight: normal;
   color: #cb38b5;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
@@ -220,7 +210,7 @@ h4 {
 /* Textarea elegante e centrata */
 textarea {
   width: 100%;
-  height: 250px;
+  min-height: 200px;
   padding: 15px;
   font-family: monospace;
   font-size: 15px;
@@ -228,10 +218,12 @@ textarea {
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-  resize: vertical;
+  resize: none; /* ← disabilita il resize manuale per non interferire */
   color: #333;
   transition: border-color 0.3s ease;
+  overflow: hidden; /* ← impedisce scrollbar interne */
 }
+
 
 textarea:focus {
   border-color: #ce1bb3;
