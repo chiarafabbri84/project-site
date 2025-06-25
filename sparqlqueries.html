@@ -72,8 +72,9 @@
     <p> The first thing we wanted to check was if our chosen topic was present in the <strong><a href="http://wit.istc.cnr.it/arco"class="no-underline-link" target="_blank">Arco Knowledge Graph</a><strong>.</p>
 				<br>  
 	    <h3>🔍SPARQL query:</h3>
-	    <section class="query-container">
-      <textarea oninput="autoResize(this)">PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+	    <pre class="sparql-code"><code>
+
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
 PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 PREFIX arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 PREFIX a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
@@ -85,30 +86,15 @@ WHERE {
           rdfs:label ?label .
 
   ?address clv:hasAddressArea ?city .
-
+  
   FILTER(REGEX(?label, "Palazzo dei Diamanti", "i"))
   FILTER(REGEX(STR(?city), "Ferrara", "i"))
 }
-LIMIT 100</textarea>
-    <p style="text-align:center; font-style: italic; color: #666;">
-    </p>
-  </section>
-	    <script>
-  function autoResize(textarea) {
-    textarea.style.height = 'auto';                 // resetta
-    textarea.style.height = textarea.scrollHeight + 'px';  // imposta alla dimensione del contenuto
-  }
-
-  document.addEventListener("input", event => {
-    if (event.target.tagName === 'TEXTAREA') {
-      autoResize(event.target);
-    }
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("textarea").forEach(autoResize);
-  });
-</script>
+LIMIT 100
+</code></pre>
+	    
+	    
+	    
 
 
 		
