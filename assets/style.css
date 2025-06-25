@@ -262,8 +262,9 @@ display: block;        /* assicura che sia un blocco */
 }
 
 	@media (min-width: 1400px) {
-  .logo-list {
-    padding: 0 2vw;  /* stesso padding del paragrafo */
+  p {
+    max-width: 1200px; /* più largo del 800px */
+    padding: 0 1vw;
   }
 }
 
