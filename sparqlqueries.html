@@ -73,24 +73,25 @@
 				<br>  
 	    <h3>🔍SPARQL query:</h3>
 	 <pre class="sparql-code"><code>
-<span class="keyword">PREFIX</span> rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-<span class="keyword">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-<span class="keyword">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
-<span class="keyword">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
-<span class="keyword">PREFIX</span> clv: &lt;https://w3id.org/italia/onto/CLV/&gt;
+<span class="keyword-main">PREFIX</span> rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+<span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+<span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+<span class="keyword-main">PREFIX</span> clv: &lt;https://w3id.org/italia/onto/CLV/&gt;
 
-<span class="keyword">SELECT DISTINCT</span> ?entity ?label ?city
-<span class="keyword">WHERE</span> {
-  ?entity a arco:ImmovableCulturalProperty ;
-          rdfs:label ?label .
+<span class="keyword-main">SELECT</span> <span class="keyword-main">DISTINCT</span> <span class="keyword-label">?entity</span> <span class="keyword-label">?label</span> <span class="keyword-label">?city</span>
+<span class="keyword-main">WHERE</span> {
+  ?entity a arco:<span class="keyword-second">ImmovableCulturalProperty</span> ;
+          rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?label</span> .
 
-  ?address clv:hasAddressArea ?city .
+  ?address clv:hasAddressArea <span class="keyword-label">?city</span> .
   
-  <span class="keyword">FILTER</span>(REGEX(?label, "Palazzo dei Diamanti", "i"))
-  <span class="keyword">FILTER</span>(REGEX(STR(?city), "Ferrara", "i"))
+  <span class="keyword-main">FILTER</span>(<span class="keyword-regex">REGEX</span>(<span class="keyword-label">?label</span>, "Palazzo dei Diamanti", "i"))
+  <span class="keyword-main">FILTER</span>(<span class="keyword-regex">REGEX</span>(STR(<span class="keyword-label">?city</span>), "Ferrara", "i"))
 }
-<span class="keyword">LIMIT</span> 100
+<span class="keyword-main">LIMIT</span> <span class="keyword-red">100</span>
 </code></pre>
+
 
 	    <p><code>DISTINCT</code>: removes duplicate results.<br>
 		<code>FILTER</code>: restricts the results based on conditions.<br>
