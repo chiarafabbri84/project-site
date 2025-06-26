@@ -361,19 +361,16 @@ code {
   height: auto;
 }
 
-/* two image containers (use 25% for four, and 33% for three, etc) */
-.column {
-  max-width: 800px
-  float: center;
-  width: 50%;
-  margin: 2em auto
-  padding: 0 2vw;
+.image-row {
+  display: flex;
+  justify-content: center; /* centra le immagini */
+  gap: 20px; /* spazio tra le immagini */
+  flex-wrap: wrap; /* va a capo su schermi piccoli */
+  margin: 2em 0;
 }
 
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+.image-row img {
+  max-width: 45%;
+  height: auto;
 }
 
