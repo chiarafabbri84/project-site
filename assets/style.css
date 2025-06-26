@@ -363,7 +363,7 @@ code {
 
 /* two image containers (use 25% for four, and 33% for three, etc) */
 .column {
-  float: left;
+  float: center;
   width: 50%;
   margin: 2em auto
   padding: 5px;
