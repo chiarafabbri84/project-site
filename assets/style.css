@@ -364,16 +364,17 @@ code {
 .image-row {
   display: flex;
   justify-content: center;
-  gap: 1vw; /* stesso spazio orizzontale dei paragrafi */
+  gap: 2vw;
   flex-wrap: wrap;
-  margin: 1em auto; /* margine identico ai paragrafi */
-  padding: 0 2vw;
+  padding: 0 8vw; /* aumenta il margine interno ai lati */
+  margin-bottom: 1.5em;
 }
 
 .image-row img {
-  max-width: 45vw; /* larghezza massima più contenuta su schermo */
-  width: calc(50% - 1vw); /* due immagini affiancate con gap */
+  width: 100%;
+  max-width: 300px; /* riduce la dimensione massima */
   height: auto;
-
+  border-radius: 8px;
 }
+
 
