@@ -363,14 +363,17 @@ code {
 
 .image-row {
   display: flex;
-  justify-content: center; /* centra le immagini */
-  gap: 1vw; /* spazio tra le immagini */
-  flex-wrap: wrap; /* va a capo su schermi piccoli */
-  margin: 2em 0;
+  justify-content: center;
+  gap: 1vw; /* stesso spazio orizzontale dei paragrafi */
+  flex-wrap: wrap;
+  margin: 1em auto; /* margine identico ai paragrafi */
+  padding: 0 2vw;
 }
 
 .image-row img {
-  max-width: 45%;
+  max-width: 45vw; /* larghezza massima più contenuta su schermo */
+  width: calc(50% - 1vw); /* due immagini affiancate con gap */
   height: auto;
+
 }
 
