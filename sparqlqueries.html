@@ -224,7 +224,7 @@
         </div>
 	<p>We discovered that the commissioner wasn't present, so it gave us "false" as result.</p>
 	<h3>3. CULTURAL PROPERTY ADDRESS</h3>
-	    <p>
+	    <p>Another thing we noticed while browing the Palazzo dei Diamanti resource was that the address was extremely vague. So, in order to check it, we ran another query.
 
 		    
 	    </p>
@@ -240,7 +240,7 @@
             a-loc:<span class="keyword-second">hasCulturalPropertyAddress</span> <span class="keyword-label">?address</span> .
   <span class="keyword-label">?address</span> rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?addressLabel</span> .
   
-  <span class="keyword-main">FILTER</span>(<span class="keyword-second">CONTAINS</span>(<span class="keyword-second">LCASE</span>(<span class="keyword-label">?propertyLabel</span>), "palazzo dei diamanti"))
+  <span class="keyword-main">FILTER</span>(<span class="keyword-regex">CONTAINS</span>(<span class="keyword-regex">LCASE</span>(<span class="keyword-label">?propertyLabel</span>), "palazzo dei diamanti"))
 }
 </code></pre>
 
