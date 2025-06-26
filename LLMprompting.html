@@ -37,11 +37,11 @@
  	  <br>
     <h2>Large Language Models</h2>
     <br>
-    <p> LLMs are AI systems trained on massive amounts of text data. They can understand, generate, and translate human language, as well as perform various other natural language processing tasks. For our project, we used <strong><a href="https://chatgpt.com/" class="no-underline-link" target="_blank">ChatGPT</a></strong> and <strong><a href="https://www.deepseek.com/" class="no-underline-link" target="_blank">Deepseek</a></strong>.
+    <p> <strong><a href="https://en.wikipedia.org/wiki/Large_language_model" class="no-underline-link" target="_blank">LLMs</a></strong> are <strong><a href="https://en.wikipedia.org/wiki/Artificial_intelligence" class="no-underline-link" target="_blank">AI systems</a></strong> trained on massive amounts of text data. They can understand, generate, and translate human language, as well as perform various other natural language processing tasks. For our project, we used <strong><a href="https://chatgpt.com/" class="no-underline-link" target="_blank">ChatGPT</a></strong> and <strong><a href="https://www.deepseek.com/" class="no-underline-link" target="_blank">Deepseek</a></strong>.
 	<br> </p>
 <h3>1. Zero-shot Prompting Technique</h3>
-<p><br>This is a prompting technique in which a language model is asked to perform a task or generate a response by prompt, which does not contain contain neither examples nor demonstrations, so instead it's relying on its pre-existing database. This technique is useful if one wants to receive a short answer. We used this technique to investigate monuments in Ferrara, so that we could search them with the SPARQL queries on the Arco SPARQL endpoint.
-<br>Both Chat GPT and DeepSeek provided us with the same answers to the prompt.</p>
+<p><br>This is a <strong><a href="https://en.wikipedia.org/wiki/Prompt_engineering" class="no-underline-link" target="_blank">prompting</a></strong> technique in which a language model is asked to perform a task or generate a response by prompt, which does not contain contain neither examples nor demonstrations, so instead it's relying on its pre-existing database. This technique is useful if one wants to receive a short answer. We used this technique to investigate monuments in <strong><a href="https://en.wikipedia.org/wiki/Ferrara" class="no-underline-link" target="_blank">Ferrara</a></strong>, so that we could search them with the SPARQL queries on the  <strong><a href="https://dati.cultura.gov.it/sparql" class="no-underline-link" target="_blank">ArCo SPARQL endpoint</a></strong>.
+<br>Both <strong><a href="https://chatgpt.com/" class="no-underline-link" target="_blank">ChatGPT</a></strong> and <strong><a href="https://www.deepseek.com/" class="no-underline-link" target="_blank">DeepSeek</a></strong> provided us with the same answers to the prompt.</p>
 <br>
 	  <div class="image-row">
   <img src="assets/images/0shotchaptgpt.jpg" alt="Zero-shot prompting with ChatGPT">
@@ -50,11 +50,11 @@
 
 <br>
 <h3>2. Few-shot Prompting Technique</h3>
-<p><br>A Zero-shot prompting technique does not always yield reliable results, or the desired answer, if the task requires a specific format or a more nuanced understanding. If the model is guided with more concrete examples, it will produce richer and more relevant responses. In our case, since we wanted to know what Palazzo dei Diamanti hosts/is used for, we employed this technique to get a more specific answer, and we provided the LLMs with a mock procedure to imitate when giving out the answer.</p>
+<p><br>A Zero-shot <strong><a href="https://en.wikipedia.org/wiki/Prompt_engineering" class="no-underline-link" target="_blank">prompting</a></strong> technique does not always yield reliable results, or the desired answer, if the task requires a specific format or a more nuanced understanding. If the model is guided with more concrete examples, it will produce richer and more relevant responses. In our case, since we wanted to know what Palazzo dei Diamanti hosts/is used for, we employed this technique to get a more specific answer, and we provided the LLMs with a mock procedure to imitate when giving out the answer.</p>
  <br> foto
  <br>
  <h3>3. Chain-of-Thought Prompting Technique</h3>
- <p><br>The Chain-of-Thought technique consists in guiding the LLMs in generating a step-by-step explanation or reasoning process to produce a final answer. Instead of directly asking for a solution, like in the Zero-shot prompting technique, the AI will break the task in smaller steps.
+ <p><br>The Chain-of-Thought technique consists in guiding the LLMs in generating a step-by-step explanation or reasoning process to produce a final answer. Instead of directly asking for a solution, like in the Zero-shot <strong><a href="https://en.wikipedia.org/wiki/Prompt_engineering" class="no-underline-link" target="_blank">prompting</a></strong> technique, the <strong><a href="https://en.wikipedia.org/wiki/Artificial_intelligence" class="no-underline-link" target="_blank">AI</a></strong> will break the task in smaller steps.
  <br>The CoT technique can also be divided into <strong>Zero-shot</strong> and <strong>Few-shot</strong>, depending on its prompt. We applied both of these techniques to check if there was going to be a difference in answers; in this case, we asked the LLMs about the commissioner of Palazzo dei Diamanti.</p>
  <br>
  <br><h3>CoT Zero-shot</h3>
