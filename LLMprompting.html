@@ -43,14 +43,11 @@
 <p><br>This is a prompting technique in which a language model is asked to perform a task or generate a response by prompt, which does not contain contain neither examples nor demonstrations, so instead it's relying on its pre-existing database. This technique is useful if one wants to receive a short answer. We used this technique to investigate monuments in Ferrara, so that we could search them with the SPARQL queries on the Arco SPARQL endpoint.
 <br>Both Chat GPT and DeepSeek provided us with the same answers to the prompt.</p>
 <br>
-<div class="row">
-  <div class="column">
-    <img src="assets/images/0shotchaptgpt.jpg" alt="Zero-shot prompting with ChatGPT" style="width:70%">
-  </div>
-  <div class="column">
-    <img src="assets/images/0shotdeepseek.png" alt="Zero-shot prompting with DeepSeek" style="width:70%">
-  </div>
-</div> 
+	  <div class="image-row">
+  <img src="assets/images/0shotchaptgpt.jpg" alt="Zero-shot prompting with ChatGPT">
+  <img src="assets/images/0shotdeepseek.png" alt="Zero-shot prompting with DeepSeek">
+</div>
+
 <br>
 <h3>2. Few-shot Prompting Technique</h3>
 <p><br>A Zero-shot prompting technique does not always yield reliable results, or the desired answer, if the task requires a specific format or a more nuanced understanding. If the model is guided with more concrete examples, it will produce richer and more relevant responses. In our case, since we wanted to know what Palazzo dei Diamanti hosts/is used for, we employed this technique to get a more specific answer, and we provided the LLMs with a mock procedure to imitate when giving out the answer.</p>
