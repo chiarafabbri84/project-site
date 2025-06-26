@@ -194,7 +194,7 @@
 	    <p>Now, we had our first gap to enrich: the creator and author of <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong>.
 	    </p>
 	<br>
-<h3>1. COMMISSIONER</h3>
+<h3>2. COMMISSIONER</h3>
 	    <p>On the <strong><a href="http://wit.istc.cnr.it/arco/lode/extract?lang=en&url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/arco/arco.owl" class="no-underline-link" target="_blank">Arco ontology</a></strong> we found the class "commission"; we thought it was something important to specify because Ferrara is famous for the <strong><a href="https://en.wikipedia.org/wiki/House_of_Este" class="no-underline-link" target="_blank">Este family</a></strong> who lived there and commissioned many historical landmarks in the area.
 	    </p>
 	    <div style="text-align: center;">
@@ -223,7 +223,28 @@
 	    <img src="assets/results/false.png" alt="Result false" style="max-width: 70%; height: auto;" />
         </div>
 	<p>We discovered that the commissioner wasn't present, so it gave us "false" as result.</p>
-		  
+	<h3>3. CULTURAL PROPERTY ADDRESS</h3>
+	    <p>
+
+		    
+	    </p>
+	    <pre class="sparql-code"><code>
+<span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+<span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+<span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+<span class="keyword-main">SELECT</span> <span class="keyword-main">DISTINCT</span> <span class="keyword-label">?property</span> <span class="keyword-label">?propertyLabel</span> <span class="keyword-label">?address</span> <span class="keyword-label">?addressLabel</span>
+<span class="keyword-main">WHERE</span> {
+  <span class="keyword-label">?property</span> a arco:<span class="keyword-second">ImmovableCulturalProperty</span> ;
+            rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?propertyLabel</span> ;
+            a-loc:<span class="keyword-second">hasCulturalPropertyAddress</span> <span class="keyword-label">?address</span> .
+  <span class="keyword-label">?address</span> rdfs:<span class="keyword-label">label</span> <span class="keyword-label">?addressLabel</span> .
+  
+  <span class="keyword-main">FILTER</span>(<span class="keyword-second">CONTAINS</span>(<span class="keyword-second">LCASE</span>(<span class="keyword-label">?propertyLabel</span>), "palazzo dei diamanti"))
+}
+</code></pre>
+
+	    
 	  
 <div id="footer_wrap">
  <footer class="inner">
