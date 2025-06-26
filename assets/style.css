@@ -156,6 +156,17 @@ body.sparqlqueries .title-container {
   position: relative;
 }
 
+body.rdftriples .title-container {
+  min-height: 400px;
+  background-image: url("images/rdf.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
 
 .title-container h1 {
   position: relative;
