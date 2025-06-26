@@ -363,10 +363,11 @@ code {
 
 /* two image containers (use 25% for four, and 33% for three, etc) */
 .column {
+  max-width: 800px
   float: center;
   width: 50%;
-  margin: 0 auto
-  padding: 5px;
+  margin: 2em auto
+  padding: 0 2vw;
 }
 
 /* Clear floats after image containers */
