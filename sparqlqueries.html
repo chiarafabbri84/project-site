@@ -271,6 +271,7 @@
 	   <div style="text-align: center;">
 	    <img src="assets/results/pinacotecaaddress.png" alt="Results address Pinacoteca Nazionale" style="max-width: 70%; height: auto;">
         </div> 
+	    <br>
 	    <p>We found in the <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fresource+%3Flabel%0D%0AWHERE+%7B%0D%0A++%7B%0D%0A++++%3Fresource+rdfs%3Alabel+%3Flabel+.%0D%0A++++FILTER%28REGEX%28LCASE%28STR%28%3Flabel%29%29%2C+%22pinacoteca.*ferrara%22%29%29%0D%0A++%7D%0D%0A++UNION%0D%0A++%7B%0D%0A++++%3Fresource+rdfs%3Alabel+%3Flabel+.%0D%0A++++FILTER%28REGEX%28LCASE%28STR%28%3Flabel%29%29%2C+%22palazzo+dei+diamanti%22%29%29%0D%0A++%7D%0D%0A%7D%0D%0ALIMIT+10&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong> 
 		  the resource <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Indirizzo della Sede di: Gallerie Estensi - Pinacoteca nazionale di Ferrara</a></strong>, 
 		    and discovered the full address. 
