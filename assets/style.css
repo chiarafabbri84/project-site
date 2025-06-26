@@ -364,7 +364,7 @@ code {
 .image-row {
   display: flex;
   justify-content: center; /* centra le immagini */
-  gap: 20px; /* spazio tra le immagini */
+  gap: 1vw; /* spazio tra le immagini */
   flex-wrap: wrap; /* va a capo su schermi piccoli */
   margin: 2em 0;
 }
