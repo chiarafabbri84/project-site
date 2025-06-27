@@ -229,9 +229,20 @@
 		    We, then, wanted to check if this information was present in our Arco resource. The next thing we wanted to find was the right property and we found "has use".    
 	    </p>
 	    <div style="text-align: center;">
-	    <img src="assets/results/hasuse.png" alt="Result false" style="max-width: 70%; height: auto;">
+	    <img src="assets/results/hasuse.png" alt="Result false" style="max-width: 30%; height: auto;">
         </div>
 	    <br>
+	   <div class="query-container">
+  <div class="sparql-code">
+    <span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;<br><br>
+    
+    <span class="keyword-main">SELECT</span> ?use<br>
+    <span class="keyword-main">WHERE</span> {<br>
+    &nbsp;&nbsp;&lt;<span class="keyword-second">https://dati.beniculturali.it/lodview/arco/resource/HistoricOrArtisticProperty/0800201602</span>&gt; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;a-cd:hasUse ?use .<br>
+    }
+  </div>
+</div>
 	   
 	    
 	    
