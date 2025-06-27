@@ -132,15 +132,36 @@
 		  <img src="assets/prompt/prompt2.2deep.png" alt="Prompt Deep Seek: commissioner construct" style="max-width: 40%; height: auto;">
         </div>    
 	  <br>
-	  <p>ChatGPT's answer worked only if we eliminated <code>BIND</code> from the query, whereas Deep Seek's answer worked immediately.
+	  <p>Both ChatGPT's and Deep Seek's answers worked immediately. Nonetheless, Deep Seek's answer already gave us more information without us asking for it (label, gender, title).
 	  </p>
 	  <div style="text-align: center;">
 	    <img src="assets/prompt/construct2.png" alt="Construct author final" style="max-width: 30%; height: auto;">
         </div>
+	  <br>
+	  <p> We still had to manually modify the query for it to be tidier and more correct. We used 
+	  </p>
 
 <br>
  <h3>✅Final CONSTRUCT query - commissioner:</h3>
-			
+	<pre class="sparql-code"><code>
+<span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt; 
+<span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<span class="keyword-main">PREFIX</span> ex: &lt;http://example.org/&gt;
+<span class="keyword-main">PREFIX</span> foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+
+<span class="keyword-main">CONSTRUCT</span> { 
+  <span class="iri">&lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso&gt;</span> 
+      a-cd:<span class="keyword-second">hasCommittent</span> <span class="iri">ex:SigismondoDEste</span> .
+
+  <span class="iri">ex:SigismondoDEste</span> 
+      rdfs:<span class="keyword-second">label</span> <span class="literal">"Sigismondo D'Este"</span><span class="keyword-red">@it</span> ;
+      rdfs:<span class="keyword-second">type</span> foaf:<span class="keyword-second">Agent</span> .
+}
+
+<span class="keyword-main">WHERE</span> {
+}
+</code></pre>
+
 	
  
 <br>
