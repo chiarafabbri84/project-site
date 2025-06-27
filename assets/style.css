@@ -399,11 +399,12 @@ code {
 }
 
 .centered-image img {
-  display: block;       /* questo è fondamentale */
-  margin: 0 auto;       /* questo centra l’immagine */
-  max-width: 70%;
+  display: block;
+  margin: 0 auto;
+  max-width: clamp(240px, 30vw, 350px);
   height: auto;
 }
+
 
 .image-row {
   display: flex;
