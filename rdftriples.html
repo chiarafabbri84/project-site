@@ -82,17 +82,43 @@
 <div style="text-align: center;">
 	    <img src="assets/prompt/construct1final.png" alt="Construct author final" style="max-width: 30%; height: auto;">
         </div>
+	  <p>Even though Deep Seek's query was correct, we thought to manually adjust it to make it better.</p>
+	  <br>
+	  <h3>Final CONSTRUCT query:</h3>
+<pre class="sparql-code"><code>
+<span class="keyword-main">PREFIX</span> arco-core: &lt;https://w3id.org/arco/core/&gt;
+<span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+<span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<span class="keyword-main">PREFIX</span> agent: &lt;https://w3id.org/arco/resource/Agent/&gt;
+<span class="keyword-main">PREFIX</span> owl: &lt;http://www.w3.org/2002/07/owl#&gt;
 
+<span class="keyword-main">CONSTRUCT</span> {
+  <span class="iri">&lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso&gt;</span>
+      a-cd:<span class="keyword-label">hasAuthor</span> 
+      <span class="iri">&lt;https://w3id.org/arco/resource/Agent/cb6b3b232a0e002ec5aac6af75410092&gt;</span> .
+
+  <span class="iri">&lt;https://w3id.org/arco/resource/Agent/cb6b3b232a0e002ec5aac6af75410092&gt;</span>
+      rdfs:<span class="keyword-label">label</span> <span class="literal">"Biagio Rossetti"</span> ;
+      owl:<span class="keyword-label">sameAs</span> <span class="iri">&lt;https://www.wikidata.org/wiki/Q855263&gt;</span> .
+}
+<span class="keyword-main">WHERE</span> {
+  
+}
+</code></pre>
+
+<br> 
 	  
-<h3>1. COMMISSIONER</h3>
+<h3>2. COMMISSIONER</h3>
+	 <p>The second gap we wanted to fill was the commissioner, Sigismondo d'Este. Unfortunately, we don't have an ArCo resouce for Sigismondo d'Este, so we have to 
+		 
+	 </p>
+	  <br>
+	  <b>💬PROMPT:</b><br>
 	  <p>
   Hi, I want to enrich the <strong>Arco knowledge graph</strong> by adding new RDF triples to the resource <em>Palazzo dei Diamanti</em> (0800201602).
   This time, we would like to specify <strong>who the commissioner</strong> of Palazzo dei Diamanti is.
   Can you create an RDF triple based on the sentence:
   <q>Sigismondo D’Este is the commissioner of Palazzo dei Diamanti</q>?
-</p>
-
-<p>
   Please note that the IRI for Palazzo dei Diamanti is:<br>
   <code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso</code><br>
   The predicate to be used is: <code>a-cd:hasCommittent</code><br>
