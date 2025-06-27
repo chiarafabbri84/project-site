@@ -82,9 +82,10 @@
 <div style="text-align: center;">
 	    <img src="assets/prompt/construct1final.png" alt="Construct author final" style="max-width: 30%; height: auto;">
         </div>
+	  <br>
 	  <p>Even though Deep Seek's query was correct, we thought to manually adjust it to make it better.</p>
 	  <br>
-	  <h3>Final CONSTRUCT query:</h3>
+	  <h3>✅Final CONSTRUCT query - author:</h3>
 <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> arco-core: &lt;https://w3id.org/arco/core/&gt;
 <span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
 <span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
@@ -108,30 +109,45 @@
 <br> 
 	  
 <h3>2. COMMISSIONER</h3>
-	 <p>The second gap we wanted to fill was the commissioner, Sigismondo d'Este. Unfortunately, we don't have an ArCo resouce for Sigismondo d'Este, so we have to 
+	 <p>The second gap we wanted to fill was the commissioner, Sigismondo d'Este. Unfortunately, there isn't an ArCo resouce for Sigismondo d'Este, so we had to ask ChatGPR and Deep Seek to 
+		 give us the triple and <code>>CONSTRUCT</code> query without a real Arco resource.
 		 
 	 </p>
 	  <br>
-	  <b>💬PROMPT:</b><br>
+	  <p><b>💬PROMPT:</b><br></p>
 	  <p>
   Hi, I want to enrich the <strong>Arco knowledge graph</strong> by adding new RDF triples to the resource <em>Palazzo dei Diamanti</em> (0800201602).
   This time, we would like to specify <strong>who the commissioner</strong> of Palazzo dei Diamanti is.
-  Can you create an RDF triple based on the sentence:
-  <q>Sigismondo D’Este is the commissioner of Palazzo dei Diamanti</q>?
-  Please note that the IRI for Palazzo dei Diamanti is:<br>
-  <code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso</code><br>
-  The predicate to be used is: <code>a-cd:hasCommittent</code><br>
-  The object is the literal: <code>"Sigismondo d’Este"</code>
-  At the moment, I do not have a specific Arco resource (IRI) for Sigismondo d’Este.
+  Can you create an RDF triple based on the sentence: Sigismondo D’Este is the commissioner of Palazzo dei Diamanti? 
+  Please note that the IRI for Palazzo dei Diamanti is: <code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso</code>, the predicate to be used is: <code>a-cd:hasCommittent</code>,
+  and the object is the literal: <code>"Sigismondo d’Este"</code>. At the moment, I do not have a specific Arco resource (IRI) for Sigismondo d’Este.
 </p>
+	<div class="image-row">
+	    <img src="assets/prompt/prompt2.png" alt="Prompt ChatGPT: commissioner" style="max-width: 40%; height: auto;">
+		  <img src="assets/prompt/prompt2deep.png" alt="Prompt Deep Seek: commissioner" style="max-width: 40%; height: auto;">
+        </div>  
+	  <br>
+	  <p><b>💬PROMPT:</b><br>
+	Now I want to create a CONSTRUCT query for Arco SPARQL endpoint with this triple.</p>
+		<div class="image-row">
+	    <img src="assets/prompt/prompt2.2.png" alt="Prompt ChatGPT: commissioner construct" style="max-width: 40%; height: auto;">
+		  <img src="assets/prompt/prompt2.2deep.png" alt="Prompt Deep Seek: commissioner construct" style="max-width: 40%; height: auto;">
+        </div>    
+	  <br>
+	  <p>ChatGPT's answer worked only if we eliminated <code>BIND</code> from the query, whereas Deep Seek's answer worked immediately.
+	  </p>
+	  <div style="text-align: center;">
+	    <img src="assets/prompt/construct2.png" alt="Construct author final" style="max-width: 30%; height: auto;">
+        </div>
 
 
+	  
+ <h3>✅Final CONSTRUCT query - commissioner:</h3>
 			
 	
  
 <br>
 	  <br>
-    <h2>CONSTRUCT QUERY</h2>
     <br>
     <p> Welcome to our <strong><a href="https://www.unibo.it/it/studiare/insegnamenti-competenze-trasversali-moocs/insegnamenti/insegnamento/2024/502752" class="no-underline-link">KE4H</a></strong> project, an exploration and enrichment of the entities representing <strong><a href="https://en.wikipedia.org/wiki/Rimini" class="no-underline-link">Rimini</a></strong>’s cultural landmarks through the framework of the <strong><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" class="no-underline-link"</a> Wikidata</a></strong> <strong><a href="https://en.wikipedia.org/wiki/Knowledge_graph" class="no-underline-link"</a> Knowledge Graph</a></strong>.
 Although Wikidata is one of the most extensive open knowledge bases, we found that several important monuments in Rimini, including the <strong><a href="arcodaugusto.html#arch-title" class="no-underline-link">Arch of Augustus</a></strong>, the <strong><a href="tempiomalatestiano.html#arch-title" class="no-underline-link">Malatesta Temple</a></strong>, 
