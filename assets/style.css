@@ -167,6 +167,39 @@ body.rdftriples .title-container {
   position: relative;
 }
 
+body.llmprompting .title-container {
+  min-height: 400px;
+  background-image: url("images/llmpromptingpage.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+body.challenges .title-container {
+  min-height: 400px;
+  background-image: url("images/challengespage.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+body.conclusions .title-container {
+  min-height: 400px;
+  background-image: url("images/conclusions.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
 
 .title-container h1 {
   position: relative;
