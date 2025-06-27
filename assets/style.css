@@ -372,27 +372,21 @@ code {
   height: auto;
 }
 
-@media (min-width: 1400px) {
-  .image-row {
-    padding: 0 12vw;      /* più margine ai lati */
-    gap: 2.5vw;           /* spazio tra le immagini */
-  }
-
 .image-row {
   display: flex;
   justify-content: center;
-  gap: 2vw;
+  gap: 1.5vw; /* margine tra le immagini */
   flex-wrap: wrap;
-  padding: 0 8vw; /* aumenta il margine interno ai lati */
+  padding: 0 5vw; /* margine laterale ridotto */
   margin-bottom: 1.5em;
 }
 
 .image-row img {
   width: 100%;
-  max-width: 45vw; /* più fluido rispetto ai 300px fissi */
-  min-width: 200px; /* evita che diventino troppo piccole */
+  max-width: clamp(240px, 25vw, 300px); /* più flessibile */
   height: auto;
   border-radius: 8px;
 }
+
 
 
