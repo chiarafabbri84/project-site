@@ -48,10 +48,15 @@
 <br>
 <h3>2. Few-shot Prompting Technique</h3>
 <p><br>A Zero-shot <strong><a href="https://en.wikipedia.org/wiki/Prompt_engineering" class="no-underline-link" target="_blank">prompting</a></strong> technique does not always yield reliable results, or the desired answer, if the task requires a specific format or a more nuanced understanding. If the model is guided with more concrete examples, it will produce richer and more relevant responses. In our case, since we wanted to know what <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> hosts/is used for, we employed this technique to get a more specific answer, and we provided the <strong><a href="https://en.wikipedia.org/wiki/Large_language_model" class="no-underline-link" target="_blank">LLMs</a></strong> with a mock procedure to imitate when giving out the answer.</p>
- <br> 
- 
- <br><p>As seen above, after the <strong><a href="https://en.wikipedia.org/wiki/Large_language_model" class="no-underline-link" target="_blank">LLMs</a></strong> were given two examples (in this case, <strong><a href="https://en.wikipedia.org/wiki/Palazzo_Pitti" class="no-underline-link" target="_blank">Palazzo Pitti</a></strong> in <strong><a href="https://en.wikipedia.org/wiki/Florence" class="no-underline-link" target="_blank">Florence</a></strong> and <strong><a href="https://en.wikipedia.org/wiki/Royal_Palace_of_Turin" class="no-underline-link" target="_blank">Royal Palace</a></strong> in <strong><a href="https://en.wikipedia.org/wiki/Turin" class="no-underline-link" target="_blank">Turin</a></strong>), they were successfully able to tell what <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> is used for. This was particularly useful in finding out its address, as shown by the process described on the page <strong><a href="sparqlqueries.html">SPARQL queries</a></strong>.<br>
  <br>
+	  <div class="image-row">
+  <img src="assets/images/chatgpthasuse.png" alt="Few-shot prompting with ChatGPT">
+  <img src="assets/images/deepseekhasuse.png" alt="Few-shot prompting with DeepSeek">
+</div>
+<br>
+ <br><p>As seen above, after the <strong><a href="https://en.wikipedia.org/wiki/Large_language_model" class="no-underline-link" target="_blank">LLMs</a></strong> were given two examples (in this case, <strong><a href="https://en.wikipedia.org/wiki/Palazzo_Pitti" class="no-underline-link" target="_blank">Palazzo Pitti</a></strong> in <strong><a href="https://en.wikipedia.org/wiki/Florence" class="no-underline-link" target="_blank">Florence</a></strong> and <strong><a href="https://en.wikipedia.org/wiki/Royal_Palace_of_Turin" class="no-underline-link" target="_blank">Royal Palace</a></strong> in <strong><a href="https://en.wikipedia.org/wiki/Turin" class="no-underline-link" target="_blank">Turin</a></strong>), they were successfully able to tell what <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> is used for. This was particularly useful in finding out its address, as shown by the process described on the page <strong><a href="sparqlqueries.html">SPARQL queries</a></strong>.<br>
+ 
+<br>
  <h3>3. Chain-of-Thought Prompting Technique</h3>
  <p><br>The Chain-of-Thought technique consists in guiding the <strong><a href="https://en.wikipedia.org/wiki/Large_language_model" class="no-underline-link" target="_blank">LLMs</a></strong> in generating a step-by-step explanation or reasoning process to produce a final answer. Instead of directly asking for a solution, like in the Zero-shot <strong><a href="https://en.wikipedia.org/wiki/Prompt_engineering" class="no-underline-link" target="_blank">prompting</a></strong> technique, the <strong><a href="https://en.wikipedia.org/wiki/Artificial_intelligence" class="no-underline-link" target="_blank">AI</a></strong> will break the task in smaller steps.
  <br>The CoT technique can also be divided into <strong> <a class="no-underline-link">Zero-shot</a></strong> and <strong><a class="no-underline-link">Few-shot</a></strong>, depending on its prompt. We applied both of these techniques to check if there was going to be a difference in answers; in this case, we asked the <strong><a href="https://en.wikipedia.org/wiki/Large_language_model" class="no-underline-link" target="_blank">LLMs</a></strong> about the commissioner of <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong>.</p>
@@ -62,10 +67,12 @@
 </div>
  <br><p>Just as shown before, the prompt that was given was a direct question with no examples. After adding the request "let's think step-by-step", the <strong><a href="https://en.wikipedia.org/wiki/Large_language_model" class="no-underline-link" target="_blank">LLMs</a></strong> gave an answer by breaking the task into smaller ones. 
  <br><h3>CoT Few-shot</h3>
- <br> <div class="image-row">
+  <br>
+	 <div class="image-row">
   <img src="assets/images/chatgptcommission.png" alt="cot with ChatGPT">
   <img src="assets/images/deepseekcommission.png" alt="cot with DeepSeek">
 </div>
+<br>
  <br><p>Here the <strong><a href="https://en.wikipedia.org/wiki/Large_language_model" class="no-underline-link" target="_blank">LLMs</a></strong> were asked with the few shot prompting. As shown above, they had to follow the formatting of the prompt when responding. However, they both gava a different answer. <strong><a href="https://www.deepseek.com/" class="no-underline-link" target="_blank">DeepSeek</a></strong> correctly guessed that it was commissioned by <strong><a href="https://it.wikipedia.org/wiki/Sigismondo_I_d%27Este" class="no-underline-link" target="_blank">Sigismondo I d’Este</a></strong>, which is the correct answer. However, <strong><a href="https://chatgpt.com/?model=auto" class="no-underline-link" target="_blank">Chat GPT</a></strong> replied that his brother, <strong><a href="https://en.wikipedia.org/wiki/Ercole_I_d%27Este" class="no-underline-link" target="_blank">Ercole I D'Este</a></strong>, who was the Duke at the time, is the commissioner. For this reason, it is always important to check whether the information given by the <strong><a href="https://en.wikipedia.org/wiki/Large_language_model" class="no-underline-link" target="_blank">LLMs</a></strong> are correct. 
  
 </p>
