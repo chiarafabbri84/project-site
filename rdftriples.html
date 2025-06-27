@@ -26,15 +26,13 @@
   <main>
 <div class="title-container">
   <h1 id="arch-title" class="anchor-offset" style="color: white;">
-    RDF triples <br>
+    RDF triples and CONSTRUCT queries
   </h1>
 </div>
 <br>
 <br>
 <br>
- <h2>RDF triples and CONSTRUCT queries</h2>
-<br>
- <h3>1. AUTHOR</h3>
+ <h2>1. AUTHOR</h2>
 	<p>To fill the first gap, we asked two different LLMs (ChatGPT and Deep Seek) to help us creating the triples that were later used for our CONSTRUCT queries. <br>
 	We know what our subject, predicate and object are thanks to our <b>SELECT</b> queries: <br>
 		1. <b>SUBJECT</b>: Palazzo dei Diamanti -<br>
@@ -108,7 +106,7 @@
 
 <br> 
 	  
-<h3>2. COMMISSIONER</h3>
+<h2>2. COMMISSIONER</h2>
 	 <p>The second gap we wanted to fill was the commissioner, Sigismondo d'Este. Unfortunately, there isn't an ArCo resouce for Sigismondo d'Este, so we had to ask ChatGPR and Deep Seek to 
 		 give us the triple and <code>>CONSTRUCT</code> query without a real Arco resource.
 		 
@@ -120,7 +118,7 @@
   This time, we would like to specify <strong>who the commissioner</strong> of Palazzo dei Diamanti is.
   Can you create an RDF triple based on the sentence: Sigismondo D’Este is the commissioner of Palazzo dei Diamanti? 
   Please note that the IRI for Palazzo dei Diamanti is: <code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso</code>, the predicate to be used is: <code>a-cd:hasCommittent</code>,
-  and the object is the literal: <code>"Sigismondo d’Este"</code>. At the moment, I do not have a specific Arco resource (IRI) for Sigismondo d’Este.
+  and the object is <code>"Sigismondo d’Este"</code>. At the moment, I do not have a specific Arco resource (IRI) for Sigismondo d’Este.
 </p>
 	<div class="image-row">
 	    <img src="assets/prompt/prompt2.png" alt="Prompt ChatGPT: commissioner" style="max-width: 40%; height: auto;">
@@ -140,8 +138,7 @@
 	    <img src="assets/prompt/construct2.png" alt="Construct author final" style="max-width: 30%; height: auto;">
         </div>
 
-
-	  
+<br>
  <h3>✅Final CONSTRUCT query - commissioner:</h3>
 			
 	
