@@ -65,7 +65,7 @@
 		    <code>REGEX</code>: checks whether a string value matches a given regular expression pattern.<br>
 		    <code>LIMIT</code>: restricts the number of resuts, according to what number you put afterwards.
 	    </p>
-	    <h3>Results</h3>
+	    <h3>✅Results</h3>
 		<p><strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+clv%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FCLV%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fentity+%3Flabel+%3Fcity%0D%0AWHERE+%7B%0D%0A++%3Fentity+a+arco%3AImmovableCulturalProperty+%3B%0D%0A++++++++++rdfs%3Alabel+%3Flabel+.%0D%0A%0D%0A++%3Faddress+clv%3AhasAddressArea+%3Fcity+.%0D%0A++%0D%0A++FILTER%28REGEX%28%3Flabel%2C+%22Palazzo+dei+Diamanti%22%2C+%22i%22%29%29%0D%0A++FILTER%28REGEX%28STR%28%3Fcity%29%2C+%22Ferrara%22%2C+%22i%22%29%29%0D%0A%7D%0D%0ALIMIT+100%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank"> Let's see the results!</a></strong>
 		<br>
 		Firtsly, we used <code>LIMIT</code> 10, but we noticed that there were only results for <strong><a href="https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0500174229-bene-individuo" class="no-underline-link" target="_blank">Palazzo dei Diamanti in Verona</a></strong>. <br>
@@ -97,7 +97,7 @@
 <span class="keyword-main">LIMIT</span> <span class="keyword-red">10</span>
 </code></pre>
 	    </p>
-	    <h3>Results</h3>
+	    <h3>✅Results</h3>
 		<p><strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+clv%3A+%3Chttps%3A%2F%2Fw3id.org%2Fitalia%2Fonto%2FCLV%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fentity+%3Flabel+%3Fcity%0D%0AWHERE+%7B%0D%0A++%3Fentity+a+arco%3AImmovableCulturalProperty+%3B%0D%0A++++++++++rdfs%3Alabel+%3Flabel+.%0D%0A%0D%0A++%3Faddress+clv%3AhasAddressArea+%3Fcity+.%0D%0A++%0D%0A++FILTER%28REGEX%28%3Flabel%2C+%22Teatro+Regio%22%2C+%22i%22%29%29%0D%0A++FILTER%28REGEX%28STR%28%3Fcity%29%2C+%22Parma%22%2C+%22i%22%29%29%0D%0A%7D%0D%0ALIMIT+100%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank"> Let's see the results!</a></strong>
 		<br>
 		We noticed that <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800125745.html"class="no-underline-link" target="_blank">this resource</a></strong> had many more properties that could have been useful for our enrichment. </p>
@@ -105,7 +105,7 @@
         <img src="assets/results/2.png" alt="Results of the second query" style="max-width: 70%; height: auto;" />
         </div>
 	<br>
-		 <h3>🔍SPARQL query: comparison with Wikidata</h3>
+		 <h3>🔍SPARQL query: comparison with <strong><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" class="no-underline-link" target="_blank">Wikidata</a></strong></h3>
 		    <p>We wanted to compare the information available for <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">our resource on ArCo</a></strong> with the information available on <strong><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" class="no-underline-link" target="_blank">Wikidata</a></strong>. So, we ran the following query on <strong><a href="https://query.wikidata.org/" class="no-underline-link" target="_blank">Wikidata Query Service</a></strong> to find <strong><a href="https://en.wikipedia.org/wiki/Ferrara" class="no-underline-link" target="_blank">Ferrara</a></strong>'s <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong>.</p>
 	<pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 <span class="keyword-main">PREFIX</span> wd: &lt;http://www.wikidata.org/entity/&gt;
@@ -126,13 +126,13 @@
   <span class="keyword-main">FILTER</span>(<span class="keyword-regex">REGEX</span>(<span class="keyword-label">?monument_name</span>, "diamanti", "i"))
 }
 </code></pre>
-	<h3>Results</h3>
-		<p><strong><a href="https://query.wikidata.org/#PREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%09PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0A%09PREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0A%09SELECT%20DISTINCT%20%2a%0A%09WHERE%20%7B%20%0A%09%09%20%20%3Fmonuments%20wdt%3AP17%20wd%3AQ38%3B%0A%09%09%09%09%20%20wdt%3AP131%20wd%3AQ13362%3B%0A%09%09%09%09%20%20wdt%3AP1435%20wd%3AQ26971668%3B%0A%09%09%09%09%20%20rdfs%3Alabel%20%3Fmonument_name%20.%0A%09%09%20%20%3Fmonuments%20wdt%3AP131%20%3Fmoncity%20.%09%0A%09%09%20%20%3Fmoncity%20rdfs%3Alabel%20%3Fcity%20.%0A%09FILTER%20%28lang%28%3Fmonument_name%29%20%3D%20%22it%22%29%0A%09FILTER%20%28lang%28%3Fcity%29%20%3D%20%22it%22%29%0A%09FILTER%20%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20REGEX%28%3Fmonument_name%2C%20%22diamanti%22%2C%20%22i%22%29%0A%20%20%29%0A%7D%0A" class="no-underline-link" target="_blank"> Let's see the results!</a></strong>
+	<h3>✅Results</h3>
+		<p><strong><a href="https://query.wikidata.org/#PREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%09PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0A%09PREFIX%20wdt%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fprop%2Fdirect%2F%3E%0A%09SELECT%20DISTINCT%20%2a%0A%09WHERE%20%7B%20%0A%09%09%20%20%3Fmonuments%20wdt%3AP17%20wd%3AQ38%3B%0A%09%09%09%09%20%20wdt%3AP131%20wd%3AQ13362%3B%0A%09%09%09%09%20%20wdt%3AP1435%20wd%3AQ26971668%3B%0A%09%09%09%09%20%20rdfs%3Alabel%20%3Fmonument_name%20.%0A%09%09%20%20%3Fmonuments%20wdt%3AP131%20%3Fmoncity%20.%09%0A%09%09%20%20%3Fmoncity%20rdfs%3Alabel%20%3Fcity%20.%0A%09FILTER%20%28lang%28%3Fmonument_name%29%20%3D%20%22it%22%29%0A%09FILTER%20%28lang%28%3Fcity%29%20%3D%20%22it%22%29%0A%09FILTER%20%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20REGEX%28%3Fmonument_name%2C%20%22diamanti%22%2C%20%22i%22%29%0A%20%20%29%0A%7D%0A" class="no-underline-link" target="_blank"> Let's see the results!</a></strong></p>
 		<br>
-		We found out that our <strong><a href="https://www.wikidata.org/wiki/Q2047639" class="no-underline-link" target="_blank">topic in Wikidata</a></strong> had different properties and information. Many pieces of information we gathered in this Knowledge Graph have been used to enrich <strong><a href="http://wit.istc.cnr.it/arco" class="no-underline-link" target="_blank">ArCo</a></strong>'s one.</p>
-		<div style="text-align: center;">
+	    <div style="text-align: center;">
         <img src="assets/results/wiki.png" alt="Results of Wikidata query" style="max-width: 70%; height: auto;" />
         </div>
+		<p>We found out that our <strong><a href="https://www.wikidata.org/wiki/Q2047639" class="no-underline-link" target="_blank">topic in Wikidata</a></strong> had different properties and information. Many pieces of information we gathered in this Knowledge Graph have been used to enrich <strong><a href="http://wit.istc.cnr.it/arco" class="no-underline-link" target="_blank">ArCo</a></strong>'s one.</p>
 	<br>
 <br>
 	  <h2>Gap identification</h2>
@@ -161,7 +161,7 @@
 	    <p><code>OPTIONAL</code>: includes non-mandatory data.<br>
 	    </p>
 
-	    <h3>Results</h3>
+	    <h3>✅Results</h3>
 		<p><strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3FpropertyLabel+%3Fauthor+%3FauthorLabel%0D%0AWHERE+%7B%0D%0A++%3Fproperty+a+arco%3AArchitecturalOrLandscapeHeritage+%3B%0D%0A++++++++++++arco%3AuniqueIdentifier+%220800201602%22+%3B%0D%0A++++++++++++a-cd%3AhasAuthor+%3Fauthor+.%0D%0A++%0D%0A++OPTIONAL+%7B+%3Fproperty+rdfs%3Alabel+%3FpropertyLabel+%7D%0D%0A++OPTIONAL+%7B+%3Fauthor+rdfs%3Alabel+%3FauthorLabel+%7D%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">It gave us no results.</a></strong>
 		<br>
 			At first, we thought that the query was wrong. To check if that was the case, we tried to check for <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800125745.html" class="no-underline-link" target="_blank">Teatro Regio</a></strong>'s author.
@@ -212,21 +212,25 @@
 	    <p><code>ASK</code>: checks if a pattern exists. It can only return "true" or "false".<br>
 	    </p>
 <br>
-	<h3>Results</h3>
+	<h3>✅Results</h3>
 		<div style="text-align: center;">
 	    <img src="assets/results/false.png" alt="Result false" style="max-width: 70%; height: auto;">
         </div>
 	<p>We discovered that the commissioner wasn't present, so it gave us "false" as result. Now, we have our second gap to enrich: the commissioner of the Palazzo dei Diamanti.</p>
 	<br>
 	    <h3>3. HAS USE</h3>
-	    <p>From Wikidata, we discovered that the Palazzo dei Diamanti hosted the Pinacoteca Nazionale. 
-		    We, then, wanted to check if this information was present in our Arco resource. The next thing we wanted to find was the right property and we found "has use".    
-	    </p>
+	    <p>From <strong><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page"class="no-underline-link" target="_blank">Wikidata</a></strong>, we discovered that the <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> hosted the <strong><a href="https://en.wikipedia.org/wiki/Pinacoteca_Nazionale_in_Ferrara" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a></strong>. 
+		   </p>   
+	    <div style="text-align: center;">
+	    <img src="assets/results/wikiuse.png" alt="Wikidata Palazzo dei diamanti - occupant" style="max-width: 70%; height: auto;">
+        </div>
+		    <p>We, then, wanted to check if this information was present in <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">our Arco resource</a></strong>. The next thing we wanted to find was the right property and we found "has use".    
+		    </p>
 	    <div style="text-align: center;">
 	    <img src="assets/results/hasuse.png" alt="hasUse ontology" style="max-width: 30%; height: auto;">
         </div>
 	    <br>
-	    <p>So, we decided to check if this property was present in our resource.</p>
+	    <p>So, we decided to check if this property was present in <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">our resource</a></strong>.</p>
 	   <br>
 <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
 <span class="keyword-main">SELECT</span> ?use
@@ -235,17 +239,17 @@
     &nbsp;&nbsp;&nbsp;&nbsp;a-cd:hasUse ?use .
 }</code></pre>
   
-	    <h3>Results</h3>
+	    <h3>✅Results</h3>
 	    <div style="text-align: center;">
 	    <img src="assets/results/use.png" alt="Results hasUse" style="max-width: 30%; height: auto;">
         </div>
 	    <p>With these <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+%3Fuse%0D%0AWHERE+%7B%0D%0A++%3Chttps%3A%2F%2Fdati.beniculturali.it%2Flodview%2Farco%2Fresource%2FHistoricOrArtisticProperty%2F0800201602%3E+%0D%0Aa-cd%3AhasUse+%3Fuse+.%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong>, we had the confirmation that the property a-cd:hasUse wasn't present in our resource. 
-		    Now we have our third gap: what Palazzo dei Diamanti is used for, the Pinacoteca Nazionale.
+		    Now we have our third gap: what <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> is used for, the <strong><a href="https://en.wikipedia.org/wiki/Pinacoteca_Nazionale_in_Ferrara" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a></strong>.
 	    </p>
 	    
 	    <br>
 	    <h3>4. CULTURAL PROPERTY ADDRESS</h3>
-	    <p>Another thing we noticed while browing the Palazzo dei Diamanti resource was that the address was extremely vague. So, in order to check it, we ran another query.   
+	    <p>Another thing we noticed while browing the <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Palazzo dei Diamanti resource</a></strong> was that the address was extremely vague. So, in order to check it, we ran another query.   
 	    </p>
 	    <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 <span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
@@ -265,12 +269,12 @@
 	    <p><code>ORDER BY DESC(?addressLabel)</code>: sorts the results alphabetically in descending order by address label.	    
 	    </p>
 <br>
-	<h3>Results</h3>
+	<h3>✅Results</h3>
 		<div style="text-align: center;">
 	    <img src="assets/results/addresspalazzo.png" alt="Results address Palazzo dei Diamanti" style="max-width: 70%; height: auto;" />
         </div>
-	    <p>All the <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3FpropertyLabel+%3Faddress+%3FaddressLabel%0D%0AWHERE+%7B%0D%0A++%3Fproperty+a+arco%3AImmovableCulturalProperty+%3B%0D%0A++++++++++++rdfs%3Alabel+%3FpropertyLabel+%3B%0D%0A++++++++++++a-loc%3AhasCulturalPropertyAddress+%3Faddress+.%0D%0A++%3Faddress+rdfs%3Alabel+%3FaddressLabel+.%0D%0A++%0D%0A++FILTER%28CONTAINS%28LCASE%28%3FpropertyLabel%29%2C+%22palazzo+dei+diamanti%22%29%29%0D%0A%7D%0D%0AORDER+BY+DESC%28%3FaddressLabel%29&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong> were vague or incorrect: the majority of them were Ferrara, Emilia Romagna, and others were Ferrara, Lombardia or Toscana (which is incorrect). 		    
-	    We know that Palazzo dei Diamanti contains the Pinacoteca Nazionale of Ferrara, and they share the same address. So, we wanted to check whether the Pinacoteca Nazionale had the correct address or not.
+	    <p>All the <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3FpropertyLabel+%3Faddress+%3FaddressLabel%0D%0AWHERE+%7B%0D%0A++%3Fproperty+a+arco%3AImmovableCulturalProperty+%3B%0D%0A++++++++++++rdfs%3Alabel+%3FpropertyLabel+%3B%0D%0A++++++++++++a-loc%3AhasCulturalPropertyAddress+%3Faddress+.%0D%0A++%3Faddress+rdfs%3Alabel+%3FaddressLabel+.%0D%0A++%0D%0A++FILTER%28CONTAINS%28LCASE%28%3FpropertyLabel%29%2C+%22palazzo+dei+diamanti%22%29%29%0D%0A%7D%0D%0AORDER+BY+DESC%28%3FaddressLabel%29&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong> were vague or incorrect: the majority of them were <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/Address/7a158aba3997f39da10ecbd0f8e5ac52.html" class="no-underline-link" target="_blank">Ferrara, Emilia Romagna, and others were Ferrara, Lombardia or Ferrara, Toscana</a></strong> (which are incorrect). 		    
+	    We know that <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> contains the <strong><a href="https://en.wikipedia.org/wiki/Pinacoteca_Nazionale_in_Ferrara" class="no-underline-link" target="_blank">Pinacoteca Nazionale of Ferrara</a></strong>, and they share the same address. So, we wanted to check whether the <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a></strong> had the correct address or not.
 	    </p>
 	    <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 
