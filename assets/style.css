@@ -389,7 +389,8 @@ code {
 
 .image-row img {
   width: 100%;
-  max-width: 300px; /* riduce la dimensione massima */
+  max-width: 45vw; /* più fluido rispetto ai 300px fissi */
+  min-width: 200px; /* evita che diventino troppo piccole */
   height: auto;
   border-radius: 8px;
 }
