@@ -241,39 +241,7 @@
 	    <br>
 	<p>We discovered that the commissioner wasn't present, so it gave us "false" as result. Now, we have our second gap to enrich: the commissioner of the Palazzo dei Diamanti.</p>
 	<br>
-	    <h3>3. HAS USE</h3>
-	    <p>From <strong><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page"class="no-underline-link" target="_blank">Wikidata</a></strong>, we discovered that the <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> hosted the <strong><a href="https://en.wikipedia.org/wiki/Pinacoteca_Nazionale_in_Ferrara" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a></strong>. 
-		   </p>   
-	    <div style="text-align: center;">
-	    <img src="assets/results/wikiuse.png" alt="Wikidata Palazzo dei diamanti - occupant" style="max-width: 50%; height: auto;">
-        </div>
-	    <br>
-		    <p>We, then, wanted to check if this information was present in <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">our Arco resource</a></strong>. The next thing we wanted to find was the right property and we found "has use".    
-		    </p>
-	    <div style="text-align: center;">
-	    <img src="assets/results/hasuse.png" alt="hasUse ontology" style="max-width: 30%; height: auto;">
-        </div>
-	    <br>
-	    <p>So, we decided to check if this property was present in <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">our resource</a></strong>.</p>
-	   <br>
-<pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
-<span class="keyword-main">SELECT</span> ?use
-<span class="keyword-main">WHERE</span> {
-    &nbsp;&nbsp;&lt;<span class="keyword-second">https://dati.beniculturali.it/lodview/arco/resource/HistoricOrArtisticProperty/0800201602</span>&gt; 
-    &nbsp;&nbsp;&nbsp;&nbsp;a-cd:hasUse ?use .
-}</code></pre>
-  
-	    <h3>✅Results</h3>
-	    <div style="text-align: center;">
-	    <img src="assets/results/use.png" alt="Results hasUse" style="max-width: 30%; height: auto;">
-        </div>
-	    <br>
-	    <p>With these <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+%3Fuse%0D%0AWHERE+%7B%0D%0A++%3Chttps%3A%2F%2Fdati.beniculturali.it%2Flodview%2Farco%2Fresource%2FHistoricOrArtisticProperty%2F0800201602%3E+%0D%0Aa-cd%3AhasUse+%3Fuse+.%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong>, we had the confirmation that the property a-cd:hasUse wasn't present in our resource. 
-		    Now we have our third gap: what <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> is used for, the <strong><a href="https://en.wikipedia.org/wiki/Pinacoteca_Nazionale_in_Ferrara" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a></strong>.
-	    </p>
-	    <br>
-
-	    <h3>4. CULTURAL PROPERTY ADDRESS</h3>
+	    <h3>3. CULTURAL PROPERTY ADDRESS</h3>
 	    <p>Another thing we noticed while browsing the <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Palazzo dei Diamanti resource</a></strong> was that the address was extremely vague. So, in order to check it, we ran another query.   
 	    </p>
 	    <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
@@ -300,7 +268,12 @@
         </div>
 	    <br>
 	    <p>All the <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3FpropertyLabel+%3Faddress+%3FaddressLabel%0D%0AWHERE+%7B%0D%0A++%3Fproperty+a+arco%3AImmovableCulturalProperty+%3B%0D%0A++++++++++++rdfs%3Alabel+%3FpropertyLabel+%3B%0D%0A++++++++++++a-loc%3AhasCulturalPropertyAddress+%3Faddress+.%0D%0A++%3Faddress+rdfs%3Alabel+%3FaddressLabel+.%0D%0A++%0D%0A++FILTER%28CONTAINS%28LCASE%28%3FpropertyLabel%29%2C+%22palazzo+dei+diamanti%22%29%29%0D%0A%7D%0D%0AORDER+BY+DESC%28%3FaddressLabel%29&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong> were vague or incorrect: the majority of them were <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/Address/7a158aba3997f39da10ecbd0f8e5ac52.html" class="no-underline-link" target="_blank">Ferrara, Emilia Romagna, and others were Ferrara, Lombardia or Ferrara, Toscana</a></strong> (which are incorrect). 		    
-	    We know that <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> contains the <strong><a href="https://en.wikipedia.org/wiki/Pinacoteca_Nazionale_in_Ferrara" class="no-underline-link" target="_blank">Pinacoteca Nazionale of Ferrara</a></strong>, and they share the same address. So, we wanted to check whether the <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a></strong> had the correct address or not.
+	    Browsing the <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Wikidata Palazzo dei Diamanti resource</a></strong>, we discovered that it hosted the <strong><a href="https://en.wikipedia.org/wiki/Pinacoteca_Nazionale_in_Ferrara" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a></strong>, and they share the same address.</p>   
+	    <div style="text-align: center;">
+	    <img src="assets/results/wikiuse.png" alt="Wikidata Palazzo dei diamanti - occupant" style="max-width: 50%; height: auto;">
+        </div>
+		    
+		     <p>So, we wanted to check both if there was a resource for the <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a></strong> in <strong><a href="http://wit.istc.cnr.it/arco" class="no-underline-link" target="_blank">Arco</a></strong>, and if there was correct address.
 	    </p>
 	    <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 
@@ -326,7 +299,7 @@
 	    <br>
 	    <p>We found in the <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fresource+%3Flabel%0D%0AWHERE+%7B%0D%0A++%7B%0D%0A++++%3Fresource+rdfs%3Alabel+%3Flabel+.%0D%0A++++FILTER%28REGEX%28LCASE%28STR%28%3Flabel%29%29%2C+%22pinacoteca.*ferrara%22%29%29%0D%0A++%7D%0D%0A++UNION%0D%0A++%7B%0D%0A++++%3Fresource+rdfs%3Alabel+%3Flabel+.%0D%0A++++FILTER%28REGEX%28LCASE%28STR%28%3Flabel%29%29%2C+%22palazzo+dei+diamanti%22%29%29%0D%0A++%7D%0D%0A%7D%0D%0ALIMIT+10&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong> 
 		  the resource <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Indirizzo della Sede di: Gallerie Estensi - Pinacoteca nazionale di Ferrara</a></strong>, 
-		    and discovered the full address. 
+		    for the full address. Moreover, among the results, there was the resource for the <strong><a href="https://dati.beniculturali.it/lodview/mibact/luoghi/resource/CulturalInstituteOrSite/20151.html" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a>. 
 	    </p>
 	    <br>
 	    <div style="text-align: center;">
@@ -336,8 +309,32 @@
 	    <p>Since the <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> and the <strong><a href="https://en.wikipedia.org/wiki/Pinacoteca_Nazionale_in_Ferrara" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a></strong> share the same address, we found our first and final gap. We, now, wanted to add the address we had found in the <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Palazzo dei Diamanti resource</a></strong>, not only in the <strong><a href="https://dati.beniculturali.it/lodview/mibact/luoghi/resource/CulturalInstituteOrSite/20151.html" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a></strong>.
 	    </p>
 	    <br>
-	    <br>
 	    
+	    	    <h3>3. HAS USE</h3>
+		    <p>After having found out that the <strong><a href="https://en.wikipedia.org/wiki/Pinacoteca_Nazionale_in_Ferrara" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a></strong> was hosted in the <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong>, we wanted to check if this information was present in <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">our Arco resource</a></strong>. The next thing we wanted to find was the right property and we found "has use".    
+		    </p>
+	    <div style="text-align: center;">
+	    <img src="assets/results/hasuse.png" alt="hasUse ontology" style="max-width: 30%; height: auto;">
+        </div>
+	    <br>
+	    <p>So, we decided to check if this property was present in <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">our resource</a></strong>.</p>
+	   <br>
+<pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
+<span class="keyword-main">SELECT</span> ?use
+<span class="keyword-main">WHERE</span> {
+    &nbsp;&nbsp;&lt;<span class="keyword-second">https://dati.beniculturali.it/lodview/arco/resource/HistoricOrArtisticProperty/0800201602</span>&gt; 
+    &nbsp;&nbsp;&nbsp;&nbsp;a-cd:hasUse ?use .
+}</code></pre>
+  
+	    <h3>✅Results</h3>
+	    <div style="text-align: center;">
+	    <img src="assets/results/use.png" alt="Results hasUse" style="max-width: 30%; height: auto;">
+        </div>
+	    <br>
+	    <p>With these <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0A%0D%0ASELECT+%3Fuse%0D%0AWHERE+%7B%0D%0A++%3Chttps%3A%2F%2Fdati.beniculturali.it%2Flodview%2Farco%2Fresource%2FHistoricOrArtisticProperty%2F0800201602%3E+%0D%0Aa-cd%3AhasUse+%3Fuse+.%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong>, we had the confirmation that the property a-cd:hasUse wasn't present in our resource. 
+		    Now we have our third gap: what <strong><a href="https://en.wikipedia.org/wiki/Palazzo_dei_Diamanti" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> is used for, the <strong><a href="https://en.wikipedia.org/wiki/Pinacoteca_Nazionale_in_Ferrara" class="no-underline-link" target="_blank">Pinacoteca Nazionale</a></strong>.
+	    </p>
+	    <br>
 	  
 <div id="footer_wrap">
  <footer class="inner">
