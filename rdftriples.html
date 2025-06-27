@@ -56,21 +56,30 @@
 		  <img src="assets/prompt/prompt1deep.png" alt="Answer Deep Seek: author triple" style="max-width: 40%; height: auto;">
         </div>
 	  <br>
-<p><b>💬PROMPT:</b>
+<p><b>💬PROMPT:</b><br>
 	Now I want to create a CONSTRUCT query for Arco SPARQL endpoint with this triple.</p>
 	<div class="image-row">
-	    <img src="assets/prompt/prompt1.2.png" alt="Answer ChatGPT: author triple" style="max-width: 40%; height: auto;">
-		  <img src="assets/prompt/prompt1.2deep.png" alt="Answer Deep Seek: author triple" style="max-width: 40%; height: auto;">
+	    <img src="assets/prompt/prompt1.2.png" alt="Answer ChatGPT: author construct" style="max-width: 40%; height: auto;">
+		  <img src="assets/prompt/prompt1.2deep.png" alt="Answer Deep Seek: author construct" style="max-width: 40%; height: auto;">
         </div>
 	  <p>Now, we tried to run both queries and we noticed that ChatGPT's result <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+arco-ar%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FArchitecturalOrLandscapeHeritage%2F%3E%0D%0APREFIX+arco-ag%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FAgent%2F%3E%0D%0A%0D%0ACONSTRUCT+%7B%0D%0A++arco-ar%3A0800201602-bene-complesso+a-cd%3AhasAuthor+arco-ag%3Acb6b3b232a0e002ec5aac6af75410092+.%0D%0A%7D%0D%0AWHERE+%7B%0D%0A++BIND%28arco-ar%3A0800201602-bene-complesso+AS+%3Fheritage%29%0D%0A++BIND%28arco-ag%3Acb6b3b232a0e002ec5aac6af75410092+AS+%3Fauthor%29%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link"> was an error</a></strong>.
 	  Deep Seek's answer, instead, <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+a-cd%3A+%3Chttp%3A%2F%2Fexample.org%2Farco-cataloguing%2F%3E%0D%0APREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fns%2Farco%23%3E%0D%0A%0D%0ACONSTRUCT+%7B%0D%0A++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FArchitecturalOrLandscapeHeritage%2F0800201602-bene-complesso%3E+%0D%0A++++++a-cd%3AhasAuthor+%0D%0A++++++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FAgent%2Fcb6b3b232a0e002ec5aac6af75410092%3E+.%0D%0A%7D%0D%0AWHERE+%7B%0D%0A++%23+Optional%3A+Add+any+conditions+to+verify+the+resources+exist%0D%0A++OPTIONAL+%7B%0D%0A++++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FArchitecturalOrLandscapeHeritage%2F0800201602-bene-complesso%3E+a+arco%3ACulturalProperty+.%0D%0A++%7D%0D%0A++OPTIONAL+%7B%0D%0A++++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FAgent%2Fcb6b3b232a0e002ec5aac6af75410092%3E+a+arco%3AAgent+.%0D%0A++%7D%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link">worked</a></strong>.
 	  </p>
 	  <div style="text-align: center;">
-	    <img src="assets/prompt/construct1.png" alt="Construct author" style="max-width: 50%; height: auto;">
+	    <img src="assets/prompt/construct1.png" alt="Construct author" style="max-width: 30%; height: auto;">
         </div>
-	  <p>Now, we wanted to add both the label for Biagio Rossetti and a link to his Wikidata's page. So, we asked another prompt to both LLMs.</p>
-	  
-	  
+	  <p>Now, we wanted to add both the label for Biagio Rossetti and a link to his Wikidata's resource So, we asked another prompt to both LLMs.<br>
+		  <br>
+	  <b>💬PROMPT:</b><br>
+		  Perfect, I want to add a label for the agent "Biagio Rossetti" in my CONSTRUCT query. Also, I need to add a link to his Wikidata's resource (Q855263)
+	  </p>
+	<div class="image-row">
+	    <img src="assets/prompt/prompt1.3.png" alt="Answer ChatGPT: author construct final" style="max-width: 40%; height: auto;">
+		  <img src="assets/prompt/prompt1.3deep.png" alt="Answer Deep Seek: author construct final" style="max-width: 40%; height: auto;">
+        </div>
+	  <p>We tried to run both queries: ChatGPT's one gave us 'error', but worked without <code>BIND</code>; Deep Seek's answer worked immediately. 
+		  
+	  </p>
 
 			
 	
