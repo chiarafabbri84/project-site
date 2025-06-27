@@ -41,8 +41,7 @@
     <h3>🔍SPARQL query: finding our topic</h3>
     <p> The first thing we wanted to check was if our chosen topic was present in the <strong><a href="http://wit.istc.cnr.it/arco"class="no-underline-link" target="_blank">ArCo Knowledge Graph</a><strong>.</p>
 					    
-	 <pre class="sparql-code"><code>
-<span class="keyword-main">PREFIX</span> rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+	 <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
 <span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 <span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 <span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
@@ -79,8 +78,7 @@
 	    <p>Since we noticed that many properties were missing in our topic resource page, we decided to compare this resource to another famous landmark of <strong><a href="https://it.wikipedia.org/wiki/Emilia-Romagna" class="no-underline-link" target="_blank">Emilia Romagna</a></strong>: the <strong><a href="https://it.wikipedia.org/wiki/Teatro_Regio_(Parma)" class="no-underline-link" target="_blank">Teatro Regio in Parma</a></strong>.
 	    So, we ran the same SPARQL query, but changed the city and the label. </p>
 	         
-	    <pre class="sparql-code"><code>
-<span class="keyword-main">PREFIX</span> rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+	    <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
 <span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 <span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 <span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
@@ -109,8 +107,7 @@
 	<br>
 		 <h3>🔍SPARQL query: comparison with Wikidata</h3>
 		    <p>We wanted to compare the information available for our resource on ArCo with the information available on <strong><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" class="no-underline-link" target="_blank">Wikidata</a></strong>. So, we ran the following query on <strong><a href="https://query.wikidata.org/" class="no-underline-link" target="_blank">Wikidata Query Service</a></strong> to find Fearrara's Palazzo dei Diamanti.</p>
-	<pre class="sparql-code"><code>
-<span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+	<pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 <span class="keyword-main">PREFIX</span> wd: &lt;http://www.wikidata.org/entity/&gt;
 <span class="keyword-main">PREFIX</span> wdt: &lt;http://www.wikidata.org/prop/direct/&gt;
 
@@ -147,8 +144,7 @@
         </div>
 	  <p>We wanted to check if in <strong><a href="http://wit.istc.cnr.it/arco" class="no-underline-link" target="_blank">ArCo Knowledge Graph</a></strong> the author of <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">Palazzo dei Diamanti</a></strong> was present.
 	    Therefore, we checked in <strong><a href="https://dati.cultura.gov.it/sparql" class="no-underline-link" target="_blank">SPARQL Query Editor</a></strong>.</p>
-	    <pre class="sparql-code"><code>
-<span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+	    <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 <span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
 <span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 
@@ -170,8 +166,7 @@
 		<br>
 			At first, we thought that the query was wrong. To check if that was the case, we tried to check for <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800125745.html" class="no-underline-link" target="_blank">Teatro Regio</a></strong>'s author.
 		</p>
-	    <pre class="sparql-code"><code>
-<span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+	    <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 <span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
 <span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 
@@ -203,8 +198,7 @@
 	    <br>
 		<p>So, we wanted to check if on <strong><a href="https://dati.beniculturali.it/lodview-arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso.html" class="no-underline-link" target="_blank">our resource</a></strong> the commissioner was present.</p>
 
-	    <pre class="sparql-code"><code>
-<span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+	    <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 <span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 <span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
 
@@ -234,8 +228,7 @@
 	    <br>
 	    <p>So, we decided to check if this property was present in our resource.</p>
 	   <div class="query-container">
-  <div class="sparql-code">
-    <span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;<br>
+  <div class="sparql-code"><span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;<br>
     <span class="keyword-main">SELECT</span> ?use<br>
     <span class="keyword-main">WHERE</span> {
     &nbsp;&nbsp;&lt;<span class="keyword-second">https://dati.beniculturali.it/lodview/arco/resource/HistoricOrArtisticProperty/0800201602</span>&gt; 
@@ -255,8 +248,7 @@
 	    <h3>4. CULTURAL PROPERTY ADDRESS</h3>
 	    <p>Another thing we noticed while browing the Palazzo dei Diamanti resource was that the address was extremely vague. So, in order to check it, we ran another query.   
 	    </p>
-	    <pre class="sparql-code"><code>
-<span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+	    <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
 <span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt;
 <span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 
@@ -269,7 +261,7 @@
   
   <span class="keyword-main">FILTER</span>(<span class="keyword-regex">CONTAINS</span>(<span class="keyword-regex">LCASE</span>(<span class="keyword-label">?propertyLabel</span>), "palazzo dei diamanti"))
 }
-		    <span class="keyword-main">ORDER BY DESC</span>(?<span class="keyword-label">addressLabel</span>)
+  <span class="keyword-main">ORDER BY DESC</span>(?<span class="keyword-label">addressLabel</span>)
 </code></pre>
 <br>
 	<h3>Results</h3>
@@ -279,8 +271,7 @@
 	    <p>All the <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3FpropertyLabel+%3Faddress+%3FaddressLabel%0D%0AWHERE+%7B%0D%0A++%3Fproperty+a+arco%3AImmovableCulturalProperty+%3B%0D%0A++++++++++++rdfs%3Alabel+%3FpropertyLabel+%3B%0D%0A++++++++++++a-loc%3AhasCulturalPropertyAddress+%3Faddress+.%0D%0A++%3Faddress+rdfs%3Alabel+%3FaddressLabel+.%0D%0A++%0D%0A++FILTER%28CONTAINS%28LCASE%28%3FpropertyLabel%29%2C+%22palazzo+dei+diamanti%22%29%29%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">results</a></strong> were vague or incorrect: the majority of them were Ferrara, Emilia Romagna, and others were Ferrara, Lombardia or Toscana (which is incorrect). 		    
 	    We know that Palazzo dei Diamanti contains the Pinacoteca Nazionale of Ferrara, and they share the same address. So, we wanted to check whether the Pinacoteca Nazionale had the correct address or not.
 	    </p>
-	    <pre class="sparql-code"><code>
-<span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+	    <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 
 <span class="keyword-main">SELECT</span> <span class="keyword-main">DISTINCT</span> <span class="keyword-label">?resource</span> <span class="keyword-label">?label</span>
 <span class="keyword-main">WHERE</span> {
