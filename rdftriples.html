@@ -32,7 +32,7 @@
 <br>
 <br>
 <br>
- <h2>RDF triples</h2>
+ <h2>RDF triples and CONSTRUCT queries</h2>
 <br>
  <h3>1. AUTHOR</h3>
 	<p>To fill the first gap, we asked two different LLMs (ChatGPT and Deep Seek) to help us creating the triples that were later used for our CONSTRUCT queries. <br>
@@ -77,9 +77,29 @@
 	    <img src="assets/prompt/prompt1.3.png" alt="Answer ChatGPT: author construct final" style="max-width: 40%; height: auto;">
 		  <img src="assets/prompt/prompt1.3deep.png" alt="Answer Deep Seek: author construct final" style="max-width: 40%; height: auto;">
         </div>
-	  <p>We tried to run both queries: ChatGPT's one gave us 'error', but worked without <code>BIND</code>; Deep Seek's answer worked immediately. 
-		  
+	  <p>We tried to run both queries: ChatGPT's one gave us 'error', but worked without <code>BIND</code>; Deep Seek's answer worked immediately.   
 	  </p>
+<div style="text-align: center;">
+	    <img src="assets/prompt/construct1final.png" alt="Construct author final" style="max-width: 30%; height: auto;">
+        </div>
+
+	  
+<h3>1. COMMISSIONER</h3>
+	  <p>
+  Hi, I want to enrich the <strong>Arco knowledge graph</strong> by adding new RDF triples to the resource <em>Palazzo dei Diamanti</em> (0800201602).
+  This time, we would like to specify <strong>who the commissioner</strong> of Palazzo dei Diamanti is.
+  Can you create an RDF triple based on the sentence:
+  <q>Sigismondo D’Este is the commissioner of Palazzo dei Diamanti</q>?
+</p>
+
+<p>
+  Please note that the IRI for Palazzo dei Diamanti is:<br>
+  <code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso</code><br>
+  The predicate to be used is: <code>a-cd:hasCommittent</code><br>
+  The object is the literal: <code>"Sigismondo d’Este"</code>
+  At the moment, I do not have a specific Arco resource (IRI) for Sigismondo d’Este.
+</p>
+
 
 			
 	
