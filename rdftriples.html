@@ -107,8 +107,8 @@
 
 <br> 
 	  
-<h2>2. COMMISSIONER</h2>
-	 <p>The second gap we wanted to fill was the commissioner, Sigismondo d'Este. Unfortunately, there isn't an ArCo resouce for Sigismondo d'Este, so we had to ask ChatGPT and Deep Seek to 
+<h2>2. COMMITTENT</h2>
+	 <p>The second gap we wanted to fill was the committent, Sigismondo d'Este. Unfortunately, there isn't an ArCo resouce for Sigismondo d'Este, so we had to ask ChatGPT and Deep Seek to 
 		 give us the triple and <code>>CONSTRUCT</code> query with a provisional IRI. We know what our subject and predicate are thanks to our <b>SELECT</b> queries: <br>
 		1. <b>SUBJECT</b>: Palazzo dei Diamanti -<br>
 		&lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso&gt; <br>
@@ -120,35 +120,35 @@
 	  <p><b>💬PROMPT:</b><br></p>
 	  <p>
   Hi, I want to enrich Arco knowledge graph by adding new RDF triples to the resource Palazzo dei Diamanti (0800201602). 
-		  Now we want to add who the commissioner of Palazzo dei Diamanti is. Can you create an RDF triple based on the sentence 
-		  "Sigismondo D’Este is the commissioner of Palazzo dei diamanti". Note that the IRI for Palazzo dei Diamanti is: 
+		  Now we want to add who the committent of Palazzo dei Diamanti is. Can you create an RDF triple based on the sentence 
+		  "Sigismondo D’Este is the committent of Palazzo dei diamanti". Note that the IRI for Palazzo dei Diamanti is: 
 		  <code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso</code>, the predicate has to be <code>a-cd:hasCommittent</code>
 		  and the object is Sigismondo d’Este, but I don't have the IRI resource for him. We need a provisional IRI for Sigismondo d'Este.
 </p>
 	<div class="image-row">
 	    <img src="assets/prompt/prompt2.png" alt="Prompt ChatGPT: commissioner" style="max-width: 40%; height: auto;">
-		  <img src="assets/prompt/prompt2deep.png" alt="Prompt Deep Seek: commissioner" style="max-width: 40%; height: auto;">
+		  <img src="assets/prompt/prompt2deep.png" alt="Prompt Deep Seek: committent" style="max-width: 40%; height: auto;">
         </div>  
 	  <br>
 	  <p><b>💬PROMPT:</b><br>
 	Now I want to create a CONSTRUCT query for Arco SPARQL endpoint with this triple.</p>
 		<div class="image-row">
-	    <img src="assets/prompt/prompt2.2.png" alt="Prompt ChatGPT: commissioner construct" style="max-width: 40%; height: auto;">
-		  <img src="assets/prompt/prompt2.2deep.png" alt="Prompt Deep Seek: commissioner construct" style="max-width: 40%; height: auto;">
+	    <img src="assets/prompt/prompt2.2.png" alt="Prompt ChatGPT: committent construct" style="max-width: 40%; height: auto;">
+		  <img src="assets/prompt/prompt2.2deep.png" alt="Prompt Deep Seek: committent construct" style="max-width: 40%; height: auto;">
         </div>    
 	  <br>
 	  <p>Both <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Farco_cd%2F%3E%0D%0A%0D%0ACONSTRUCT+%7B%0D%0A++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FArchitecturalOrLandscapeHeritage%2F0800201602-bene-complesso%3E+%0D%0A++++a-cd%3AhasCommittent+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FPerson%2FSigismondoDEste%3E+.%0D%0A%7D%0D%0AWHERE+%7B%0D%0A++%23+Empty+WHERE+since+we+are+just+constructing+a+fixed+triple%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on"class="no-underline-link" target="_blank">ChatGPT's</a></strong> and Deep Seek's answers worked immediately. 
 		  Nonetheless, <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=CONSTRUCT+%7B%0D%0A++%23+Commissioner+relationship%0D%0A++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FArchitecturalOrLandscapeHeritage%2F0800201602-bene-complesso%3E%0D%0A++++++a-cd%3AhasCommittent+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2Fagent%2FSigismondo-d-Este%3E+.%0D%0A++%0D%0A++%23+Agent+description%0D%0A++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2Fagent%2FSigismondo-d-Este%3E%0D%0A++++++a+foaf%3APerson+%3B%0D%0A++++++rdfs%3Alabel+%22Sigismondo+d%27Este%22%40en%2C+%22Sigismondo+d%27Este%22%40it+%3B%0D%0A++++++foaf%3Aname+%22Sigismondo+d%27Este%22+%3B%0D%0A++++++foaf%3Agender+%22male%22+%3B%0D%0A++++++foaf%3Atitle+%22Marquis%22+.%0D%0A%7D%0D%0AWHERE+%7B%0D%0A++%23+Empty+WHERE+for+data+insertion%0D%0A++%23+Optional%3A+Add+FILTER+to+check+palazzo+exists%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on"class="no-underline-link" target="_blank">Deep Seek's answer</a></strong> already gave us more information without us asking for it (label, gender, title).
 	  </p>
 	  <div style="text-align: center;">
-	    <img src="assets/prompt/construct2.png" alt="Construct author final" style="max-width: 30%; height: auto;">
+	    <img src="assets/prompt/construct2.png" alt="Construct committent final" style="max-width: 30%; height: auto;">
         </div>
 	  <br>
 	  <p> We still had to manually modify the query for it to be tidier and more correct. We used the placeholder <code>ex:</code>, as object of our triple, since we had no IRI for Sigismondo d'Este.
 	  </p>
 
 <br>
- <h3>✅Final CONSTRUCT query - <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=CONSTRUCT+%7B%0D%0A++%23+Commissioner+relationship%0D%0A++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FArchitecturalOrLandscapeHeritage%2F0800201602-bene-complesso%3E%0D%0A++++++a-cd%3AhasCommittent+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2Fagent%2FSigismondo-d-Este%3E+.%0D%0A++%0D%0A++%23+Agent+description%0D%0A++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2Fagent%2FSigismondo-d-Este%3E%0D%0A++++++a+foaf%3APerson+%3B%0D%0A++++++rdfs%3Alabel+%22Sigismondo+d%27Este%22%40en%2C+%22Sigismondo+d%27Este%22%40it+%3B%0D%0A++++++foaf%3Aname+%22Sigismondo+d%27Este%22+%3B%0D%0A++++++foaf%3Agender+%22male%22+%3B%0D%0A++++++foaf%3Atitle+%22Marquis%22+.%0D%0A%7D%0D%0AWHERE+%7B%0D%0A++%23+Empty+WHERE+for+data+insertion%0D%0A++%23+Optional%3A+Add+FILTER+to+check+palazzo+exists%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">commissioner</a></strong>:</h3>
+ <h3>✅Final CONSTRUCT query - <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=CONSTRUCT+%7B%0D%0A++%23+Commissioner+relationship%0D%0A++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FArchitecturalOrLandscapeHeritage%2F0800201602-bene-complesso%3E%0D%0A++++++a-cd%3AhasCommittent+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2Fagent%2FSigismondo-d-Este%3E+.%0D%0A++%0D%0A++%23+Agent+description%0D%0A++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2Fagent%2FSigismondo-d-Este%3E%0D%0A++++++a+foaf%3APerson+%3B%0D%0A++++++rdfs%3Alabel+%22Sigismondo+d%27Este%22%40en%2C+%22Sigismondo+d%27Este%22%40it+%3B%0D%0A++++++foaf%3Aname+%22Sigismondo+d%27Este%22+%3B%0D%0A++++++foaf%3Agender+%22male%22+%3B%0D%0A++++++foaf%3Atitle+%22Marquis%22+.%0D%0A%7D%0D%0AWHERE+%7B%0D%0A++%23+Empty+WHERE+for+data+insertion%0D%0A++%23+Optional%3A+Add+FILTER+to+check+palazzo+exists%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">committent</a></strong>:</h3>
 	<pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> a-cd: &lt;https://w3id.org/arco/ontology/context-description/&gt; 
 <span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 <span class="keyword-main">PREFIX</span> ex: &lt;http://example.org/&gt;
