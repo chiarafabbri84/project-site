@@ -193,6 +193,39 @@
 		  <img src="assets/prompt/prompt3deep.png" alt="Prompt Deep Seek: full address" style="max-width: 40%; height: auto;">
         </div>    
 	  <br>
+	  <p><b>💬PROMPT:</b><br>
+	Now I want to create a CONSTRUCT query for Arco SPARQL endpoint with this triple. Can you also add the label: Corso Ercole I D'Este, Ferrara, Italia.</p>
+		<div class="image-row">
+	    <img src="assets/prompt/prompt3.2.png" alt="Prompt ChatGPT: address construct" style="max-width: 40%; height: auto;">
+		  <img src="assets/prompt/prompt3.2deep.png" alt="Prompt Deep Seek: address construct" style="max-width: 40%; height: auto;">
+        </div>    
+	  <br>
+	  <p>Neither ChatGPT's and Deep Seek's answers worked immediately (ChatGPT's answer gave us an error, whereas Deep Seek's one gave us "Virtuoso S1TAT Error Query did not complete due to ANYTIME timeout.".
+		  Then, we tried to manually change both queries and cancelled everything inside WHERE {}, and left it blank. By going this, they both gave us the same result.
+	  </p>
+	  <div style="text-align: center;">
+	    <img src="assets/prompt/construct3.png" alt="Construct author final" style="max-width: 30%; height: auto;">
+        </div>
+	  <br>
+ <h3>✅Final CONSTRUCT query - commissioner:</h3>
+	  <pre class="sparql-code"><code>
+<span class="keyword-main">PREFIX</span> a-loc: &lt;http://dati.beniculturali.it/onto/a-loc#&gt;
+<span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+<span class="keyword-main">CONSTRUCT</span> {
+  <span class="iri">&lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso&gt;</span> 
+    a-loc:<span class="keyword-label">hasCulturalPropertyAddress</span> 
+    <span class="iri">&lt;https://w3id.org/arco/resource/Address/Indirizzo_della_sede_di_Gallerie_Estensi_-_Pinacoteca_nazionale_di_Ferrara32022&gt;</span> .
+
+  <span class="iri">&lt;https://w3id.org/arco/resource/Address/Indirizzo_della_sede_di_Gallerie_Estensi_-_Pinacoteca_nazionale_di_Ferrara32022&gt;</span>
+    rdfs:<span class="keyword-label">label</span> <span class="literal">"Corso Ercole I D'Este, Ferrara, Italia"</span><span class="lang">@en</span> .
+}
+
+<span class="keyword-main">WHERE</span> {
+ 
+}
+</code></pre>
+
 	
 
 <br>
