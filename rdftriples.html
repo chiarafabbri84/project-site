@@ -108,7 +108,11 @@
 	  
 <h2>2. COMMISSIONER</h2>
 	 <p>The second gap we wanted to fill was the commissioner, Sigismondo d'Este. Unfortunately, there isn't an ArCo resouce for Sigismondo d'Este, so we had to ask ChatGPR and Deep Seek to 
-		 give us the triple and <code>>CONSTRUCT</code> query without a real Arco resource.
+		 give us the triple and <code>>CONSTRUCT</code> query with a provisional IRI. We know what our subject and predicate are thanks to our <b>SELECT</b> queries: <br>
+		1. <b>SUBJECT</b>: Palazzo dei Diamanti -<br>
+		&lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso&gt; <br>
+		2. <b>PREDICATE</b>: <code>a-cd:hasCommittent </code> <br>
+		3. <b>OBJECT</b>: Sigismondo d'Este - <br>
 		 
 	 </p>
 	  <br>
@@ -164,6 +168,31 @@
 	  <div style="text-align: center;">
 	    <img src="assets/prompt/construct2final.png" alt="Construct commissioner final" style="max-width: 30%; height: auto;">
         </div>
+	  <br>
+	  <h2>3. CULTURAL PROPERTY ADDRESS</h2>
+	  <p>The third gap we wanted to fill was the full address of Palazzo dei Diamanti. 
+		  We know what our subject, predicate and object are thanks to our <b>SELECT</b> queries: <br>
+		1. <b>SUBJECT</b>: Palazzo dei Diamanti -<br>
+		&lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso&gt; <br>
+		2. <b>PREDICATE</b>: <code>a-loc:hasCulturalPropertyAddress</code> <br>
+		3. <b>OBJECT</b>: Corso Ercole I D'Este, Ferrara, Italia - <br>
+		&lt;https://w3id.org/arco/resource/Address/Indirizzo_della_sede_di_Gallerie_Estensi_-_Pinacoteca_nazionale_di_Ferrara32022&gt; <br>
+	<br>
+	  </p>
+	  <br>
+	  <p><b>💬PROMPT:</b><br></p>
+	  <p>
+  Hi, I want to enrich Arco knowledge graph by adding new RDF triples to the resource Palazzo dei Diamanti (0800201602). 
+		  Now we want to add the full address of Palazzo dei Diamanti. Can you create an RDF triple based on the sentence 
+		  "Corso Ercole I D'Este, Ferrara, Italia is the full cultural property address of Palazzo dei diamanti". Note that the IRI for Palazzo dei Diamanti is: 
+		  <code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso</code>, the predicate has to be <code>a-loc:hasCulturalPropertyAddress</code>
+		  and the object is Corso Ercole I D'Este, Ferrara, Italia, (IRI: https://w3id.org/arco/resource/Address/Indirizzo_della_sede_di_Gallerie_Estensi_-_Pinacoteca_nazionale_di_Ferrara32022).
+</p>
+	  <div class="image-row">
+	    <img src="assets/prompt/prompt3.png" alt="Prompt ChatGPT: full address" style="max-width: 40%; height: auto;">
+		  <img src="assets/prompt/prompt3deep.png" alt="Prompt Deep Seek: full address" style="max-width: 40%; height: auto;">
+        </div>    
+	  <br>
 	
 
 <br>
