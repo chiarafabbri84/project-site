@@ -207,22 +207,20 @@
 	    <img src="assets/prompt/construct3.png" alt="Construct author final" style="max-width: 30%; height: auto;">
         </div>
 	  <br>
- <h3>✅Final CONSTRUCT query - commissioner:</h3>
+ <h3>✅Final CONSTRUCT query - :</h3>
 	  <pre class="sparql-code"><code>
 <span class="keyword-main">PREFIX</span> a-loc: &lt;http://dati.beniculturali.it/onto/a-loc#&gt;
 <span class="keyword-main">PREFIX</span> rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 
 <span class="keyword-main">CONSTRUCT</span> {
   <span class="iri">&lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso&gt;</span> 
-    a-loc:<span class="keyword-label">hasCulturalPropertyAddress</span> 
+    a-loc:<span class="keyword-second">hasCulturalPropertyAddress</span> 
     <span class="iri">&lt;https://w3id.org/arco/resource/Address/Indirizzo_della_sede_di_Gallerie_Estensi_-_Pinacoteca_nazionale_di_Ferrara32022&gt;</span> .
 
   <span class="iri">&lt;https://w3id.org/arco/resource/Address/Indirizzo_della_sede_di_Gallerie_Estensi_-_Pinacoteca_nazionale_di_Ferrara32022&gt;</span>
-    rdfs:<span class="keyword-label">label</span> <span class="literal">"Corso Ercole I D'Este, Ferrara, Italia"</span><span class="lang">@en</span> .
+    rdfs:<span class="keyword-second">label</span> "Corso Ercole I D'Este, Ferrara, Italia" <span class="keywords-red">@it @en</span> .
 }
-
 <span class="keyword-main">WHERE</span> {
- 
 }
 </code></pre>
 
