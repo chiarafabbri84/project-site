@@ -33,7 +33,7 @@
 <br>
 <br>
  <h2>1. AUTHOR</h2>
-	<p>To fill the first gap, we asked two different LLMs (<strong><a href="https://chatgpt.com/" class="no-underline-link" target="_blank">ChatGPT</a></strong> and <strong><a href="https://chat.deepseek.com/" class="no-underline-link" target="_blank">DeepSeek</a></strong>) to help us creating the triples that were later used for our CONSTRUCT queries. <br>
+	<p>To fill the first gap, we asked two different <strong><a href="https://en.wikipedia.org/wiki/Large_language_model" class="no-underline-link" target="_blank">LLMs</a></strong> (<strong><a href="https://chatgpt.com/" class="no-underline-link" target="_blank">ChatGPT</a></strong> and <strong><a href="https://chat.deepseek.com/" class="no-underline-link" target="_blank">DeepSeek</a></strong>) to help us creating the triples that were later used for our CONSTRUCT queries. <br>
 	We know what our subject, predicate and object are thanks to our <b>SELECT</b> queries: <br>
 		1. <b>SUBJECT</b>: Palazzo dei Diamanti -<br>
 		&lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso&gt; <br>
@@ -107,8 +107,8 @@
 
 <br> 
 	  
-<h2>2. COMMITTENT</h2>
-	 <p>The second gap we wanted to fill was the committent, <strong><a href="https://en.wikipedia.org/wiki/Sigismondo_d%27Este_(1433%E2%80%931507)" class="no-underline-link" target="_blank">Sigismondo d'Este</a></strong>. Unfortunately, there isn't an <strong><a href="http://wit.istc.cnr.it/arco/" class="no-underline-link" target="_blank">ArCo</a></strong> resouce for <strong><a href="https://en.wikipedia.org/wiki/Sigismondo_d%27Este_(1433%E2%80%931507)" class="no-underline-link" target="_blank">Sigismondo d'Este</a></strong>, so we had to ask <strong><a href="https://chatgpt.com/" class="no-underline-link" target="_blank">ChatGPT</a></strong> and <strong><a href="https://chat.deepseek.com/" class="no-underline-link" target="_blank">DeepSeek</a></strong> to 
+<h2>2. COMMISSIONER</h2>
+	 <p>The second gap we wanted to fill was the commissioner, <strong><a href="https://en.wikipedia.org/wiki/Sigismondo_d%27Este_(1433%E2%80%931507)" class="no-underline-link" target="_blank">Sigismondo d'Este</a></strong>. Unfortunately, there isn't an <strong><a href="http://wit.istc.cnr.it/arco/" class="no-underline-link" target="_blank">ArCo</a></strong> resouce for <strong><a href="https://en.wikipedia.org/wiki/Sigismondo_d%27Este_(1433%E2%80%931507)" class="no-underline-link" target="_blank">Sigismondo d'Este</a></strong>, so we had to ask <strong><a href="https://chatgpt.com/" class="no-underline-link" target="_blank">ChatGPT</a></strong> and <strong><a href="https://chat.deepseek.com/" class="no-underline-link" target="_blank">DeepSeek</a></strong> to 
 		 give us the triple and <code>>CONSTRUCT</code> query with a provisional IRI. We know what our subject and predicate are thanks to our <b>SELECT</b> queries: <br>
 		1. <b>SUBJECT</b>: Palazzo dei Diamanti -<br>
 		&lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso&gt; <br>
@@ -120,8 +120,8 @@
 	  <p><b>💬PROMPT:</b><br></p>
 	  <p>
   Hi, I want to enrich ArCo knowledge graph by adding new RDF triples to the resource Palazzo dei Diamanti (0800201602). 
-		  Now we want to add who the committent of Palazzo dei Diamanti is. Can you create an RDF triple based on the sentence 
-		  "Sigismondo D’Este is the committent of Palazzo dei diamanti". Note that the IRI for Palazzo dei Diamanti is: 
+		  Now we want to add who the commissioner of Palazzo dei Diamanti is. Can you create an RDF triple based on the sentence 
+		  "Sigismondo D’Este is the commissioner of Palazzo dei diamanti". Note that the IRI for Palazzo dei Diamanti is: 
 		  <code>https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso</code>, the predicate has to be <code>a-cd:hasCommittent</code>
 		  and the object is Sigismondo d’Este, but I don't have the IRI resource for him. We need a provisional IRI for Sigismondo d'Este.
 </p>
@@ -144,7 +144,7 @@
 	    <img src="assets/prompt/construct2.png" alt="Construct committent final" style="max-width: 30%; height: auto;">
         </div>
 	  <br>
-	  <p> We still had to manually modify the query for it to be tidier and more correct. We used the placeholder <code>ex:</code>, as object of our triple, since we had no IRI for Sigismondo d'Este.
+	  <p> We still had to manually modify the query for it to be tidier and more correct. We used the placeholder <code>ex:</code>, as object of our triple, since we had no IRI for <strong><a href="https://en.wikipedia.org/wiki/Sigismondo_d%27Este_(1433%E2%80%931507)" class="no-underline-link" target="_blank">Sigismondo d'Este</a></strong>.
 	  </p>
 
 <br>
