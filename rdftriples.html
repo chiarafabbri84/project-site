@@ -82,7 +82,7 @@
 	    <img src="assets/prompt/construct1final.png" alt="Construct author final" style="max-width: 30%; height: auto;">
         </div>
 	  <br>
-	  <p>Even though DeepSeek's query was correct, we thought to manually adjust it to make it better.</p>
+	  <p>Even though <strong><a href="https://chat.deepseek.com/" class="no-underline-link" target="_blank">DeepSeek</a></strong>'s query was correct, we thought to manually adjust it to make it better.</p>
 	  <br>
 	  <h3>✅Final CONSTRUCT query - <strong><a href="https://dati.cultura.gov.it/sparql?default-graph-uri=&query=PREFIX+arco-core%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fcore%2F%3E%0D%0APREFIX+a-cd%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fontology%2Fcontext-description%2F%3E%0D%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+agent%3A+%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FAgent%2F%3E%0D%0APREFIX+owl%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0D%0A%0D%0ACONSTRUCT+%7B%0D%0A++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FArchitecturalOrLandscapeHeritage%2F0800201602-bene-complesso%3E%0D%0A++++++a-cd%3AhasAuthor+%0D%0A++++++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FAgent%2Fcb6b3b232a0e002ec5aac6af75410092%3E+.%0D%0A%0D%0A++%3Chttps%3A%2F%2Fw3id.org%2Farco%2Fresource%2FAgent%2Fcb6b3b232a0e002ec5aac6af75410092%3E%0D%0A++++++rdfs%3Alabel+%22Biagio+Rossetti%22+%3B%0D%0A++++++owl%3AsameAs+%3Chttps%3A%2F%2Fwww.wikidata.org%2Fwiki%2FQ855263%3E+.%0D%0A%7D%0D%0AWHERE+%7B%0D%0A++%0D%0A%7D&format=text%2Fhtml&timeout=0&signal_void=on" class="no-underline-link" target="_blank">has author</a></strong>:</h3>
 <pre class="sparql-code"><code><span class="keyword-main">PREFIX</span> arco-core: &lt;https://w3id.org/arco/core/&gt;
@@ -109,11 +109,11 @@
 	  
 <h2>2. COMMISSIONER</h2>
 	 <p>The second gap we wanted to fill was the commissioner, <strong><a href="https://en.wikipedia.org/wiki/Sigismondo_d%27Este_(1433%E2%80%931507)" class="no-underline-link" target="_blank">Sigismondo d'Este</a></strong>. Unfortunately, there isn't an <strong><a href="http://wit.istc.cnr.it/arco/" class="no-underline-link" target="_blank">ArCo</a></strong> resouce for <strong><a href="https://en.wikipedia.org/wiki/Sigismondo_d%27Este_(1433%E2%80%931507)" class="no-underline-link" target="_blank">Sigismondo d'Este</a></strong>, so we had to ask <strong><a href="https://chatgpt.com/" class="no-underline-link" target="_blank">ChatGPT</a></strong> and <strong><a href="https://chat.deepseek.com/" class="no-underline-link" target="_blank">DeepSeek</a></strong> to 
-		 give us the triple and <code>>CONSTRUCT</code> query with a provisional IRI. We know what our subject and predicate are thanks to our <b>SELECT</b> queries: <br>
+		 give us the triple and <code>CONSTRUCT</code> query with a provisional IRI. We know what our subject and predicate are thanks to our <b>SELECT</b> queries: <br>
 		1. <b>SUBJECT</b>: Palazzo dei Diamanti -<br>
 		&lt;https://w3id.org/arco/resource/ArchitecturalOrLandscapeHeritage/0800201602-bene-complesso&gt; <br>
 		2. <b>PREDICATE</b>: <code>a-cd:hasCommittent </code> <br>
-		3. <b>OBJECT</b>: Sigismondo d'Este - <br>
+		3. <b>OBJECT</b>: Sigismondo d'Este<br>
 		 
 	 </p>
 	  <br>
